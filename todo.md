@@ -12,4 +12,4 @@
 [ ] Bezahlseite
 [ ] Bestellungsverfolgung
 ### Freiwillig
-[ ] Kontakt
+[X] Kontakt
