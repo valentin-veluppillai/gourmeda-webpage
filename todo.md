@@ -7,7 +7,7 @@
 [X] Registrieren
 [X] Login
 [X] Partner werden
-[ ] Jobs
+[X] Jobs
 ### Falls erforderlich
 [ ] Bezahlseite
 [ ] Bestellungsverfolgung
