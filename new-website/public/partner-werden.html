@@ -11,65 +11,123 @@
 </head>
 <body>
   <nav class="py-3 bg-proprietary text-red-100">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 py-3">
       <a href="index.html" class="text-2xl">GOurmeda</a>
     </div>
   </nav>
-  <main class="container mx-auto">
+  <main class="container mx-auto my-8">
     <header class="relative my-8 text-center">
-      <div class="absolute top-0 my-1 text-gray-700">
+      <div class="absolute top-0 ml-4 my-1 text-gray-700">
         <a href="index.html" class="underline">Home</a>
         <i class="fas fa-angle-right"></i>
         Partner werden
       </div>
-      <h1 class="text-proprietary text-2xl">Registriere dich als GOurmeda Partner</h1>
+      <h1 class="text-proprietary text-2xl font-semibold">Registriere dich als GOurmeda Partner</h1>
     </header>
     <section class="mx-auto w-2/3">
-      <div class="flex my-8 w-full p-4 bg-blue-100 rounded">
+      <div class="flex w-full p-4 my-8 bg-blue-100 rounded">
         <div class="mr-4"><i class="fas fa-info-circle text-xl text-blue-700"></i></div>
         <div>
           <h6 class="font-semibold text-blue-800">Tragen Sie Ihre Unternehmensdaten ein und profitieren Sie von unserem Liefernetzwerk!</h6>
         </div>
       </div>
+
       <h2 class="text-xl text-gray-800 font-semibold">Persönliche Daten</h2>
       <div class="flex items-center justify-between">
         <h3 class="text-gray-600 font-semibold">Tragen Sie hier die Daten des Zuständigen ein.</h3>
         <p class="text-proprietary">* Pflichtfeld</p>
       </div>
-      <div class="my-4">
-        <label class="inline-block w-1/4 mr-4">
+      
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/4 px-4">
           <span class="text-gray-700">Anrede</span>
-          <select class="form-select block w-full">
+          <select name="anrede" class="form-select w-full">
             <option></option>
             <option>Frau</option>
             <option>Herr</option>
           </select>
         </label>
       </div>
-      <div class="my-4">
-        <label class="inline-block w-1/2">
-          <span class="text-gray-700">Vorname</span>
-          <input type="text" class="form-input mt-1 block w-full" placeholder="john@example.com">
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Vorname</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="vorname" class="form-input w-full" placeholder="Max" required>
         </label>
-        <label class="inline-block w-1/2">
-          <span class="text-gray-700">Nachname</span>
-          <input type="text" class="form-input mt-1 block w-full" placeholder="john@example.com">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Nachname</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="nachname" class="form-input w-full" placeholder="Mustermann" required>
         </label>
       </div>
-      <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-            First Name
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-        </div>
-        <div class="w-full md:w-1/2 px-3">
-          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-            Last Name
-          </label>
-          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
-        </div>
+
+      <hr class="border-gray-300 my-8">
+      
+      <h2 class="text-xl text-gray-800 font-semibold">Unternehmen</h2>
+      <div class="flex items-center justify-between">
+        <h3 class="text-gray-600 font-semibold">Tragen Sie hier die Firmendaten ein.</h3>
+        <p class="text-proprietary">* Pflichtfeld</p>
+      </div>
+
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Firmenname</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="firmenname" class="form-input w-full" placeholder="Musterfirma" required>
+        </label>
+      </div>
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Telefonnummer</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="tel" name="telefonnummer" class="form-input w-full" placeholder="+43 1 2345678" required>
+        </label>
+      </div>
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Email</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="email" name="email" class="form-input w-full" placeholder="max.mustermann@email.at" required>
+        </label>
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Email wiederholen</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="email" name="repeatEmail" class="form-input w-full" placeholder="max.mustermann@email.at" required>
+        </label>
+      </div>
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Straße</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="strasse" class="form-input w-full" placeholder="Musterstraße" required>
+        </label>
+        <label class="w-1/4 px-4">
+          <span class="text-gray-700">Hausnummer</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="hausnummer" class="form-input w-full" placeholder="14" required>
+        </label>
+        <label class="w-1/4 px-4">
+          <span class="text-gray-700">Türnummer</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="tuernummer" class="form-input w-full" placeholder="9" required>
+        </label>
+      </div>
+      <div class="flex flex-wrap my-4 -mx-4">
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Postleitzahl</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="PLZ" class="form-input w-full" placeholder="1040" required>
+        </label>
+        <label class="w-1/2 px-4">
+          <span class="text-gray-700">Stadt</span><span title="Pflichtfeld" class="text-proprietary"> *</span>
+          <input type="text" name="stadt" class="form-input w-full" placeholder="Wien" required>
+        </label>
+      </div>
+
+      <hr class="border-gray-300 my-8">
+
+      <label class="w-full">
+        <span class="text-gray-700">Nachricht</span>
+        <textarea type="text" name="nachricht" class="form-textarea w-full" placeholder="Hinterlassen Sie uns eine Nachricht..." required></textarea>
+      </label>
+      <label class="inline-flex items-center my-4 mb-8">
+        <input type="checkbox" name="rechtliches" class="form-checkbox text-proprietary">
+        <span class="ml-2">Ich akzeptiere hiermit die <a href="AGB.html" class="underline text-proprietary">Allgemeinen Geschäftsbedingungen</a>.</span>
+      </label>
+      <div class="w-full flex justify-end">
+        <button type="submit" class="bg-proprietary hover:bg-red-800 text-red-100 font-semibold py-2 px-4 rounded" type="button">
+          Registrieren
+        </button>
       </div>
     </section>
   </main>
