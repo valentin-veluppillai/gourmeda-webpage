@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="py-3 bg-proprietary text-red-100">
+    <div class="container mx-auto">
+      <a href="index.html" class="text-2xl">GOurmeda</a>
+    </div>
+  </nav>
+  <main class="container mx-auto">
+    <header class="relative my-8 text-center">
+      <div class="absolute top-0 my-1 text-gray-700">
+        <a href="index.html" class="underline">Home</a>
+        <i class="fas fa-angle-right"></i>
+        Partner werden
+      </div>
+      <h1 class="text-proprietary text-2xl">Registriere dich als GOurmeda Partner</h1>
+    </header>
+    <section class="mx-auto w-2/3">
+      <div class="flex my-8 w-full p-4 bg-blue-100 rounded">
+        <div class="mr-4"><i class="fas fa-info-circle text-xl text-blue-700"></i></div>
+        <div>
+          <h6 class="font-semibold text-blue-800">Tragen Sie Ihre Unternehmensdaten ein und profitieren Sie von unserem Liefernetzwerk!</h6>
+        </div>
+      </div>
+      <h2 class="text-xl text-gray-800 font-semibold">Persönliche Daten</h2>
+      <div class="flex items-center justify-between">
+        <h3 class="text-gray-600 font-semibold">Tragen Sie hier die Daten des Zuständigen ein.</h3>
+        <p class="text-proprietary">* Pflichtfeld</p>
+      </div>
+      <div class="my-4">
+        <label class="inline-block w-1/4 mr-4">
+          <span class="text-gray-700">Anrede</span>
+          <select class="form-select block w-full">
+            <option></option>
+            <option>Frau</option>
+            <option>Herr</option>
+          </select>
+        </label>
+      </div>
+      <div class="my-4">
+        <label class="inline-block w-1/2">
+          <span class="text-gray-700">Vorname</span>
+          <input type="text" class="form-input mt-1 block w-full" placeholder="john@example.com">
+        </label>
+        <label class="inline-block w-1/2">
+          <span class="text-gray-700">Nachname</span>
+          <input type="text" class="form-input mt-1 block w-full" placeholder="john@example.com">
+        </label>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-6">
+        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+            First Name
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+          <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+            Last Name
+          </label>
+          <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
