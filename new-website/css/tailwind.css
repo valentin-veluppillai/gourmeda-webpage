@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
+/*--------------------*/
+.container {
+  @apply px-4;
+}
+/*----------link----------*/
+.link {
+  @apply underline text-proprietary-500;
+}
+.link:hover {
+  @apply text-proprietary-300;
+}
+/*----------button----------*/
+.btn {
+  @apply font-semibold py-2 px-4 rounded;
+}
+.btn-primary {
+  @apply bg-proprietary-500 text-red-100;
+}
+.btn-primary:hover {
+  @apply bg-proprietary-400;
+}
+/*----------page-title----------*/
+.page-title {
+  @apply text-proprietary-500 text-xl font-semibold;
+}
+@screen md {
+  .page-title {
+    @apply text-2xl;
+  }
+}
+/*----------alert----------*/
+.alert {
+  @apply flex w-full p-2 my-4 rounded;
+}
+@screen lg {
+  .alert {
+    @apply p-4 my-8 rounded;
+  }
+  .alert.info .icon {
+    @apply mr-4;
+  }
+}
+.alert.info {
+  @apply bg-blue-100;
+}
+.alert.info .icon {
+  @apply mr-2;
+}
+.alert.info .icon i {
+  @apply text-xl text-blue-700;
+}
+.alert.info h6 {
+  @apply font-semibold text-blue-800;
+}
+/*----------form-sections----------*/
+.form-section.title {
+  @apply text-gray-800 font-semibold;
+}
+.form-section.subtitle {
+  @apply flex items-center justify-between;
+}
+.form-section.subtitle h3 {
+  @apply text-sm text-gray-600 font-semibold;
+}
+.form-section.subtitle p {
+  @apply flex-none text-sm text-proprietary-500;
+}
+@screen sm {
+  .form-section.title {
+    @apply text-xl;
+  }
+  .form-section.subtitle h3 {
+    @apply text-base;
+  }
+  .form-section.subtitle p {
+    @apply text-base;
+  }
+}
+/*----------form-row----------*/
+.form-row {
+  @apply flex flex-wrap -mx-2;
+}
+.form-row label {
+  @apply text-gray-700 px-2;
+}
+.form-row input,select {
+  @apply w-full;
+}
+@screen sm {
+  .form-row {
+    @apply my-4;
+  }
+}
+@screen md {
+  .form-row {
+    @apply -mx-4;
+  }
+  .form-row label {
+    @apply px-4;
+  }
+}
+/*----------Breadcrumbs----------*/
+.breadcrumbs {
+  @apply absolute top-0 my-1 text-gray-700 hidden;
+}
+.breadcrumbs a {
+  @apply underline;
+}
+/*----------Footer----------*/
+footer a.page-link {
+  @apply mx-4 my-2 block;
+}
+@screen md {
+  footer a.page-link {
+    @apply my-0 inline-block;
+  }
+}
+
 @tailwind utilities;
