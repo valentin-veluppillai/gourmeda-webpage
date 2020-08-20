@@ -11,6 +11,9 @@
 .link:hover {
   @apply text-proprietary-300;
 }
+.link:visited {
+  @apply text-proprietary-800;
+}
 /*----------button----------*/
 .btn {
   @apply font-semibold py-2 px-4 rounded;
@@ -103,7 +106,12 @@
 }
 /*----------Breadcrumbs----------*/
 .breadcrumbs {
-  @apply absolute top-0 my-1 text-gray-700 hidden;
+  @apply float-left text-gray-700 py-2;
+}
+@screen lg {
+  .breadcrumbs {
+    @apply absolute my-1 float-none top-0;
+  }
 }
 .breadcrumbs a {
   @apply underline;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GOurmeda: Partner werden</title>
+  <title>GOurmeda: Registrieren</title>
 
   <link rel="stylesheet" href="./build/tailwind.css">
 
@@ -17,11 +17,13 @@
   </nav>
   <main class="container mx-auto lg:my-8 my-4">
     <header class="lg:relative lg:my-8 my-4 text-center">
-      <h1 class="page-title">Registriere dich als GOurmeda Partner</h1>
+      <h1 class="page-title">Registriere dich bei GOurmeda</h1>
       <div class="breadcrumbs block">
         <a href="index.html">Home</a>
         <i class="fas fa-angle-right"></i>
-        Partner werden
+        <a href="konto.html">Konto</a>
+        <i class="fas fa-angle-right"></i>
+        Registrieren
       </div>
     </header>
     <section class="mx-auto xl:w-2/3 lg:w-4/5 w-full">
@@ -29,16 +31,18 @@
         <div class="alert info">
           <div class="icon"><i class="fas fa-info-circle "></i></div>
           <div>
-            <h6>Vorteile eines GOurmeda-Kontos:</h6>
-            <ul>
-              <li></li>
+            <h6>Ein GOurmeda-Konto hat viele Vorteile:</h6>
+            <ul class="mx-4 list-disc text-blue-700">
+              <li>Deine Adresse wird gespeichert und automatisch als Lieferadresse verwendet.</li>
+              <li>Du wirst über aktuelle Angebote und Neuigkeiten von GOurmeda und seinen Partnern informiert.</li>
+              <li>Speicher deine Lieblingsrestaurants ab und bestelle noch schneller bei diesen.</li>
             </ul>
           </div>
         </div>
   
-        <h2 class="form-section title">Persönliche Daten</h2>
+        <h2 class="form-section title">Kontaktdaten</h2>
         <div class="form-section subtitle">
-          <h3>Tragen Sie hier die Kontaktperson ein.</h3>
+          <h3>Trage hier deine bevorzugte Lieferadresse ein.</h3>
           <p>* Pflichtfeld</p>
         </div>
         
@@ -60,37 +64,6 @@
           <label class="sm:w-1/2 w-full">
             Nachname<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
             <input type="text" name="nachname" class="form-input" placeholder="Mustermann" required>
-          </label>
-        </div>
-  
-        <hr class="border-gray-300 lg:my-8 my-4">
-
-        <h2 class="form-section title">Unternehmen</h2>
-        <div class="form-section subtitle">
-          <h3>Tragen Sie hier die Firmendaten ein.</h3>
-          <p>* Pflichtfeld</p>
-        </div>
-  
-        <div class="form-row">
-          <label class="sm:w-1/2 w-full">
-            Firmenname<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-            <input type="text" name="firmenname" class="form-input" placeholder="Musterfirma" required>
-          </label>
-        </div>
-        <div class="form-row">
-          <label class="sm:w-1/2 w-full">
-            Telefonnummer<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-            <input type="tel" name="telefonnummer" class="form-input" placeholder="+43 1 2345678" required>
-          </label>
-        </div>
-        <div class="form-row">
-          <label class="sm:w-1/2 w-full">
-            Email<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-            <input type="email" name="email" class="form-input" placeholder="max.mustermann@email.at" required>
-          </label>
-          <label class="sm:w-1/2 w-full">
-            Email wiederholen<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-            <input type="email" name="repeatEmail" class="form-input" placeholder="max.mustermann@email.at" required>
           </label>
         </div>
         <div class="form-row">
@@ -117,17 +90,57 @@
             <input type="text" name="stadt" class="form-input" placeholder="Wien" required>
           </label>
         </div>
+        <div class="form-row">
+          <label class="sm:w-1/2 w-full">
+            Telefonnummer<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
+            <input type="tel" name="telefonnummer" class="form-input" placeholder="+43 1 2345678" required>
+          </label>
+        </div>
   
         <hr class="border-gray-300 lg:my-8 my-4">
-  
-        <label class="w-full text-gray-700">
-          Nachricht
-          <textarea type="text" name="nachricht" class="form-textarea w-full" placeholder="Hinterlassen Sie uns eine Nachricht..." required></textarea>
+
+        <h2 class="form-section title">GOurmeda-Konto</h2>
+        <div class="form-section subtitle">
+          <h3>Trage hier deine Anmeldedaten ein.</h3>
+          <p>* Pflichtfeld</p>
+        </div>
+        <div class="form-row">
+          <label class="sm:w-1/2 w-full">
+            Email<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
+            <input type="email" name="email" class="form-input" placeholder="max.mustermann@email.at" required>
+          </label>
+          <label class="sm:w-1/2 w-full">
+            Email wiederholen<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
+            <input type="email" name="repeatEmail" class="form-input" placeholder="max.mustermann@email.at" required>
+          </label>
+        </div>
+        <div class="form-row">
+          <label class="sm:w-1/2 w-full">
+            Passwort<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
+            <input type="password" name="password" class="form-input" placeholder="********" required>
+          </label>
+          <label class="sm:w-1/2 w-full">
+            Passwort wiederholen<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
+            <input type="password" name="repeatpassword" class="form-input" placeholder="********" required>
+          </label>
+        </div>
+
+        <hr class="border-gray-300 lg:my-8 my-4">
+
+        <label class="inline-flex items-start">
+          <input type="checkbox" name="rechtliches" class="form-checkbox mt-1 h-5 w-5 text-proprietary-500" required><br>
+          <div>
+            <div class="ml-2 text-gray-700">Newsletter</div>
+            <div class="ml-2 text-gray-600">Ich möchte den Newsletter abonnieren um keine Angebote und Rabatte zu verpassen. Notwendige Informationen werden auch ohne Newsletter-Abonnement zugestellt.</div>
+          </div>
         </label>
-        <label class="inline-flex items-start my-4 lg:mb-8 mb-4">
+        <label class="inline-flex items-start mt-4">
           <input type="checkbox" name="rechtliches" class="form-checkbox mt-1 h-5 w-5 text-proprietary-500" required><br>
           <span class="ml-2">Ich akzeptiere hiermit die <a href="agb.html" class="link">Allgemeinen Geschäftsbedingungen</a>.</span>
         </label>
+        
+        <hr class="border-gray-300 lg:my-8 my-4">
+
         <div class="w-full flex justify-end">
           <button type="submit" class="btn btn-primary" type="button">
             Registrieren
