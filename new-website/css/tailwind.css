@@ -108,6 +108,125 @@
 .breadcrumbs a {
   @apply underline;
 }
+/*----------Sidebar----------*/
+.sidebar {
+  @apply mx-4 inline-block fixed;
+}
+.sidebar .title {
+  @apply w-full uppercase text-center text-gray-800 font-semibold my-2;
+}
+.sidebar h3 {
+  @apply text-gray-700 font-semibold mt-1;
+}
+.sidebar label {
+  @apply text-gray-700;
+}
+.sidebar .form-checkbox {
+  @apply mr-2 text-proprietary-500;
+}
+/*----------Sidebar Stars-rating----------*/
+.stars .star {
+  @apply text-gray-300 px-1 text-lg float-left;
+}
+.stars input:nth-child(1):hover ~ label:nth-of-type(-n + 1),
+.stars input:nth-child(2):hover ~ label:nth-of-type(-n + 2),
+.stars input:nth-child(3):hover ~ label:nth-of-type(-n + 3),
+.stars input:nth-child(4):hover ~ label:nth-of-type(-n + 4),
+.stars input:nth-child(5):hover ~ label:nth-of-type(-n + 5) {
+  @apply text-yellow-600 !important;
+}
+.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+.stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+  @apply text-yellow-500;
+}
+/*----------Restaurantlist----------*/
+.restaurant-item {
+  @apply flex h-40 p-4 py-8;
+}
+.restaurant-item:hover {
+  @apply bg-gray-100;
+}
+.restaurant-image {
+  @apply relative mr-2;
+}
+.restaurant-image img {
+  @apply object-contain h-full w-32;
+}
+.restaurant-image div {
+  @apply absolute bg-yellow-200 text-yellow-800 block right-0 bottom-0 rounded-full px-2 py-1;
+}
+.restaurant-item .title {
+  @apply uppercase font-semibold text-gray-800 inline-block mb-2;
+}
+.restaurant-item .tags {
+  @apply leading-tight;
+}
+
+.opening-hours {
+  @apply inline-block bg-red-200 rounded-full px-2 py-1 text-red-800 font-semibold;
+}
+.opening-hours.open {
+  @apply text-green-800 bg-green-200;
+}
+.opening-hours.semi {
+  @apply text-orange-800 bg-orange-200;
+}
+.opening-hours span::after {
+  content: 'Geschlossen';
+}
+.opening-hours.open span::after {
+  content: 'Offen';
+}
+.opening-hours.semi span::after {
+  content: 'Schließt bald';
+}
+
+.tracking {
+  @apply text-gray-400 ml-2 !important;
+}
+.tracking.available {
+  @apply text-proprietary-500 !important;
+}
+/*----------Modal----------*/
+.modal-container {
+  @apply fixed left-0 top-0 w-full h-full bg-gray-700 bg-opacity-75 opacity-0 invisible;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal {
+  @apply absolute bg-white rounded p-4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal .content {
+  @apply float-left mx-2;
+}
+.modal .title {
+  @apply font-semibold text-gray-800;
+}
+.modal.subtitle {
+  @apply text-gray-700;
+}
+.modal-close {
+  @apply float-right text-xl text-gray-600;
+  cursor: pointer;
+}
+.modal-close:hover {
+  @apply text-gray-700;
+}
+.show-modal {
+  @apply opacity-100 visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+/*----------Tippy-Box----------*/
+.tippy-box {
+  @apply bg-gray-800 text-gray-300;
+}
 /*----------Footer----------*/
 footer a.page-link {
   @apply mx-4 my-2 block;
@@ -116,6 +235,32 @@ footer a.page-link {
   footer a.page-link {
     @apply my-0 inline-block;
   }
+}
+/*----------Image-Swiper----------*/
+.image-swiper {
+  height: 350px;
+  max-height: 40vh;
+}
+.image-swiper .swiper-slide {
+  @apply bg-cover bg-center h-full w-full;
+}
+.image-swiper .swiper-slide.first {
+  background-image: url("../img/slider/gourmeda1.jpg");
+}
+.image-swiper .swiper-slide.second {
+  background-image: url("../img/slider/gourmeda2.jpg");
+}
+.image-swiper .swiper-slide.third {
+  background-image: url("../img/slider/gourmeda3.jpg");
+}
+.image-swiper .swiper-slide.fourth {
+  background-image: url("../img/slider/gourmeda4.jpg");
+}
+.image-swiper .swiper-slide.fifth {
+  background-image: url("../img/slider/pizza.jpeg");
+}
+.image-swiper .swiper-slide.sixth {
+  background-image: url("../img/slider/gourmeda7.jpg");
 }
 
 @tailwind utilities;

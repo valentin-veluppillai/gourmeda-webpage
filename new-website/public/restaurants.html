@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Restaurants</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="bg-proprietary-500 text-red-100">
+    <div class="container mx-auto py-3">
+      <a href="index.html" class="text-2xl">GOurmeda</a>
+    </div>
+  </nav>
+  <main class="container mx-auto lg:my-8 my-4">
+    <header class="relative lg:my-8 my-4 text-center">
+      <div class="breadcrumbs md:block">
+        <a href="index.html">Home</a>
+        <i class="fas fa-angle-right"></i>
+        Restaurants
+      </div>
+      <h1 class="page-title">Wähle dein Restaurant aus</h1>
+    </header>
+    <section class="sidebar">
+      <h2 class="title">Auswahl filtern</h2>
+      <h3>Bewertung:</h3>
+      <div class="stars">
+        <input type="radio" id="star1" name="rating" value="1" class="hidden"/>
+        <input type="radio" id="star2" name="rating" value="2" class="hidden"/>
+        <input type="radio" id="star3" name="rating" value="3" class="hidden"/>
+        <input type="radio" id="star4" name="rating" value="4" class="hidden"/>
+        <input type="radio" id="star5" name="rating" value="5" class="hidden"/>
+        <label for="star1" class="star"><i class="fas fa-star"></i></label>
+        <label for="star2" class="star"><i class="fas fa-star"></i></label>
+        <label for="star3" class="star"><i class="fas fa-star"></i></label>
+        <label for="star4" class="star"><i class="fas fa-star"></i></label>
+        <label for="star5" class="star"><i class="fas fa-star"></i></label>
+      </div>
+      <h3>Öffnungszeiten:</h3>
+      <label>
+        <input type="checkbox" name="geoeffnet" class="form-checkbox" checked>Geöffnet
+      </label><br>
+      <label>
+        <input type="checkbox" name="schliesst-bald" class="form-checkbox" checked>Schließt bald
+      </label><br>
+      <label>
+        <input type="checkbox" name="geschlossen" class="form-checkbox">Geschlossen
+      </label>
+      <h3>Kategorie:</h3>
+      <label>
+        <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+      </label><br>
+      <label>
+        <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+      </label><br>
+      <label>
+        <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+      </label>
+    </section>
+    <div class="inline-block w-1/6 m-4 h-64"></div>
+    <section class="w-4/6 inline-block">
+      <div class="restaurant-item">
+        <div class="restaurant-image relative mr-2">
+          <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+          <div>4,89 <i class="fas fa-star"></i></div>
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between">
+            <a href="#">
+              <h3 class="title">Curry Insel</h3>
+            </a>
+            <div>
+              <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open">
+                <i class="fas fa-clock"></i><span> </span>
+              </div>
+              <i class="fas fa-map-marked-alt tracking available"></i>
+            </div>
+          </div>
+          <div>
+            <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+            <p class="address text-gray-600 font-semibold">
+              <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-300 w-full">
+      <div class="restaurant-item">
+        <div class="restaurant-image relative mr-2">
+          <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+          <div>4,89 <i class="fas fa-star"></i></div>
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between">
+            <a href="">
+              <h3 class="title">Curry Insel</h3>
+            </a>
+            <div>
+              <div class="opening-hours open">
+                <i class="fas fa-clock"></i><span> </span>
+              </div>
+              <i class="fas fa-map-marked-alt tracking"></i>
+            </div>
+          </div>
+          <div>
+            <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+            <p class="address text-gray-600 font-semibold">
+              <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-300 w-full">
+      <div class="restaurant-item">
+        <div class="restaurant-image relative mr-2">
+          <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+          <div>4,89 <i class="fas fa-star"></i></div>
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between">
+            <a href="">
+              <h3 class="title">Curry Insel</h3>
+            </a>
+            <div>
+              <div class="opening-hours open">
+                <i class="fas fa-clock"></i><span> </span>
+              </div>
+              <i class="fas fa-map-marked-alt tracking"></i>
+            </div>
+          </div>
+          <div>
+            <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+            <p class="address text-gray-600 font-semibold">
+              <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              <button id="myButton">My Button</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-300 w-full">
+      <div class="restaurant-item">
+        <div class="restaurant-image relative mr-2">
+          <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+          <div>4,89 <i class="fas fa-star"></i></div>
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between">
+            <a href="">
+              <h3 class="title">Curry Insel</h3>
+            </a>
+            <div>
+              <div class="opening-hours open">
+                <i class="fas fa-clock"></i><span> </span>
+              </div>
+              <i class="fas fa-map-marked-alt tracking available"></i>
+            </div>
+          </div>
+          <div>
+            <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+            <p class="address text-gray-600 font-semibold">
+              <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="trigger">Click here to trigger the modal!</button>
+      <div class="modal-container">
+        <div class="modal">
+          <i class="fas fa-times modal-close"></i>
+          <span class="fa-stack float-left">
+            <i class="fas fa-circle fa-stack-2x text-gray-300"></i>
+            <i class="fas fa-filter fa-stack-1x text-gray-600"></i>
+          </span>
+          <div class="content">
+            <h5 class="title">Auswahl filtern</h5>
+            <h6 class="subtitle">Bewertung:</h6>
+            <div class="stars">
+              <input type="radio" id="star1" name="rating" value="1" class="hidden"/>
+              <input type="radio" id="star2" name="rating" value="2" class="hidden"/>
+              <input type="radio" id="star3" name="rating" value="3" class="hidden"/>
+              <input type="radio" id="star4" name="rating" value="4" class="hidden"/>
+              <input type="radio" id="star5" name="rating" value="5" class="hidden"/>
+              <label for="star1" class="star"><i class="fas fa-star"></i></label>
+              <label for="star2" class="star"><i class="fas fa-star"></i></label>
+              <label for="star3" class="star"><i class="fas fa-star"></i></label>
+              <label for="star4" class="star"><i class="fas fa-star"></i></label>
+              <label for="star5" class="star"><i class="fas fa-star"></i></label>
+            </div>
+            <h6 class="subtitle">Öffnungszeiten:</h6>
+            <label>
+              <input type="checkbox" name="geoeffnet" class="form-checkbox" checked>Geöffnet
+            </label><br>
+            <label>
+              <input type="checkbox" name="schliesst-bald" class="form-checkbox" checked>Schließt bald
+            </label><br>
+            <label>
+              <input type="checkbox" name="geschlossen" class="form-checkbox">Geschlossen
+            </label>
+            <h6 class="subtitle">Kategorie:</h6>
+            <label>
+              <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+            </label><br>
+            <label>
+              <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+            </label><br>
+            <label>
+              <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-800 text-gray-500">
+    <div class="container mx-auto py-4">
+      <div class="flex md:flex-col flex-row-reverse md:items-center md:justify-start justify-between">
+        <section class="text-gray-400 uppercase">
+          <a href="index.html" class="page-link">Home</a>
+          <a href="account.html" class="page-link">Account</a>
+          <a href="#" class="page-link">GOurmeda Family</a>
+          <a href="#" class="page-link">Partner werden</a>
+          <a href="jobs.html" class="page-link">Jobs</a>
+          <a href="kontakt.html" class="page-link">Kontakt</a>
+        </section>
+        <div class="flex flex-col md:items-center">
+          <a href="index.html" class="md:hidden text-2xl text-proprietary-500 font-semibold">GOurmeda</a>
+          <section class="md:my-4 my-2 md:text-xl text-base">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section>
+            <a href="impressum.html" class="md:inline-block block">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html" class="md:inline-block block">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html" class="md:inline-block block">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr class="border-gray-700 my-4">
+      <section class="uppercase text-center">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    tippy('[data-tippy-content]');
+    tippy('.tracking.available', {
+      content: 'Bestellungsnachverfolgung verfügbar',
+    });
+
+    var modal = document.querySelector(".modal-container");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".modal-close");
+
+    function toggleModal() {
+      modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+      if (event.target === modal) {
+        toggleModal();
+      }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+  </script>
+</body>
+</html>
