@@ -1315,6 +1315,12 @@ video {
   color: rgba(45, 55, 72, var(--text-opacity));
 }
 
+.modal.subtitle {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
 .modal-close {
   float: right;
   font-size: 1.25rem;

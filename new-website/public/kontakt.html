@@ -25,13 +25,51 @@
         </div>
         <h1 class="page-title">Kontakt aufnehmen</h1>
       </header>
-      <section class="mx-auto w-2/3 flex">
-        <div class="w-1/2">
-          <h1>Wir haben ein offenes Ohr für unsere Kunden</h1>
-          
+      <section class="mx-auto lg:w-10/12 w-full flex md:flex-row flex-col items-center align-middle">
+        <div class="md:w-1/2 sm:w-10/12 w-full mx-4 text-gray-600 md:block flex flex-col items-center">
+          <h2 class="text-lg font-semibold my-4 text-gray-700 text-center">Wir haben ein offenes Ohr für unsere Kunden</h2>
+          <p class="my-2 block">
+            Schleifmühlgasse 12-14,<br>
+            1080 Wien
+          </p>
+          <a href="tel:+4318904290" class="my-2 block"><i class="fas fa-phone-alt fa-fw"></i> +43 (0)1 8904290</a>
+          <a href="mailto:+4318904290" class="my-2 block"><i class="fas fa-envelope fa-fw"></i> +43 (0)1 8904290</a>
+          <div class="px-2 my-2 w-full text-center">Suchst du nach einer offenen Stellen?<br><a href="jobs.html" class="link">Schau dir doch unsere Jobs an</a>.</div>
         </div>
-        <div class="w-1/2">
-          awd
+        <div class="md:w-1/2 sm:w-10/12 w-full mx-4">
+          <form action="">
+            <div class="form-row">
+              <label class="sm:w-1/2 w-full">Vorname
+                <input type="text" name="vorname" class="form-input" placeholder="Max" required>
+              </label>
+              <label class="sm:w-1/2 w-full">Nachname
+                <input type="text" name="nachname" class="form-input" placeholder="Mustermann" required>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="lg:w-3/4 w-full">Email
+                <input type="email" name="email" class="form-input" placeholder="max.mustermann@email.at" required>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="lg:w-3/4 w-full">Email wiederholen
+                <input type="email" name="repeatEmail" class="form-input" placeholder="max.mustermann@email.at" required>
+              </label>
+            </div>
+            <label class="w-full text-gray-700">
+              Nachricht
+              <textarea type="text" name="nachricht" class="form-textarea w-full resize-none" rows="5" placeholder="Hinterlassen Sie uns eine Nachricht..." required></textarea>
+            </label>
+            <label class="inline-flex items-center my-4 lg:mb-8 mb-4">
+              <input type="checkbox" name="rechtliches" class="form-checkbox text-proprietary-500" required>
+              <span class="ml-2">Ich akzeptiere hiermit die <a href="datenschutz.html" class="link">Datenschutz&#173;richtlinie</a> sowie die <a href="agb.html" class="link">Allgemeinen Geschäftsbedingungen</a>.</span>
+            </label>
+            <div class="w-full flex justify-end">
+              <button type="submit" class="btn btn-primary" type="button">
+                Registrieren
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
