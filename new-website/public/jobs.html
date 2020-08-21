@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Kontakt</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="min-h-screen">
+    <nav class="bg-proprietary-500 text-red-100">
+      <div class="container mx-auto py-3">
+        <a href="index.html" class="text-2xl">GOurmeda</a>
+      </div>
+    </nav>
+    <main class="container mx-auto lg:my-8 my-4">
+      <header class="lg:relative lg:my-8 my-4 text-center">
+        <h1 class="page-title">Kontakt aufnehmen</h1>
+        <div class="breadcrumbs md:block">
+          <a href="index.html">Home</a>
+          <i class="fas fa-angle-right"></i>
+          Kontakt
+        </div>
+      </header>
+      <br class="sm:hidden">
+      <section class="mx-auto xl:w-1/2 lg:w-8/12 md:w-10/12 w-full">
+        <div class="accordion">
+          <input type="checkbox" id="accordion-handle1" checked>
+          <label for="accordion-handle1">
+            <div class="handle"><h3 class="inline-block">ZustellerIn gesucht</h3>
+              <div class="inline-block ml-2 text-gray-600 uppercase text-base">
+                Vollzeit
+              </div>
+            </div>
+          </label>
+          <div class="content">
+            <ul>
+              <li>Flexible Arbeitszeit von 0:00 - 24:00 Uhr!</li>
+            </ul>
+            <h4 class="subtitle">Anforderungen</h4>
+            <ul class="list-inside list-disc">
+              <li>B-Führerschein oder Mopedschein</li>
+            </ul>
+            <h4 class="subtitle">Kontakt</h4>
+            <div class="w-full flex sm:flex-row flex-col">
+              <div class="flex sm:w-1/2 w-full sm:pr-2 mb-4">
+                <img src="img/user.png" alt="" class="flex-none w-12 h-12 rounded-full inline-block">
+                <div class="flex-1 inline-block ml-2">
+                  <span class="block w-full text-gray-700">Tana</span>
+                  <a href="tel:+4369912125468" class="block w-full"><i class="fas fa-phone-alt"></i> +43 (0) 699 121 254 68</a>
+                </div>
+              </div>
+              <div class="flex sm:w-1/2 w-full sm:pl-2">
+                <img src="img/user.png" alt="" class="flex-none w-12 h-12 rounded-full inline-block">
+                <div class="flex-1 inline-block ml-2">
+                  <span class="block w-full text-gray-700">Astrid</span>
+                  <a href="tel:+436504705055" class="block w-full"><i class="fas fa-phone-alt"></i> +43 (0) 650 470 50 55</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-gray-300 my-3">
+        <div class="accordion">
+          <input type="checkbox" id="accordion-handle2" checked>
+          <label for="accordion-handle2">
+            <div class="handle"><h3 class="inline-block">TelefonistIn gesucht</h3>
+              <div class="inline-block ml-2 text-gray-600 uppercase text-base">
+                Vollzeit
+              </div>
+            </div>
+          </label>
+          <div class="content">
+            <ul>
+              <li>Flexible Arbeitszeit von 0:00 - 24:00 Uhr!</li>
+              <li>Auch Home-Office Tätigkeit möglich.</li>
+            </ul>
+            <h4 class="subtitle">Anforderungen</h4>
+            <ul class="list-inside list-disc">
+              <li>Kundenorientiertes Arbeiten</li>
+              <li>Freundliche Umgangsformen</li>
+              <li>Hervorragende Deutschkenntnisse</li>
+              <li>Sehr gute Englischkenntnisse</li>
+              <li>Sehr gute PC-Kenntnisse</li>
+            </ul>
+            <h4 class="subtitle">Kontakt</h4>
+            <div class="w-full flex sm:flex-row flex-col">
+              <div class="flex sm:w-1/2 w-full sm:pr-2 mb-4">
+                <img src="img/user.png" alt="" class="flex-none w-12 h-12 rounded-full inline-block">
+                <div class="flex-1 inline-block ml-2">
+                  <span class="block w-full text-gray-700">Tana</span>
+                  <a href="tel:+4369912125468" class="block w-full"><i class="fas fa-phone-alt"></i> +43 (0) 699 121 254 68</a>
+                </div>
+              </div>
+              <div class="flex sm:w-1/2 w-full sm:pl-2">
+                <img src="img/user.png" alt="" class="flex-none w-12 h-12 rounded-full inline-block">
+                <div class="flex-1 inline-block ml-2">
+                  <span class="block w-full text-gray-700">Astrid</span>
+                  <a href="tel:+436504705055" class="block w-full"><i class="fas fa-phone-alt"></i> +43 (0) 650 470 50 55</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-proprietary-500 mt-8 mb-4 font-semibold sm:text-xl text-center">Bewerbungsunterlagen einreichen</h2>
+
+        <form action="">
+          <div class="form-row">
+            <label class="sm:w-1/2 w-full">Vorname
+              <input type="text" name="vorname" class="form-input" placeholder="Max" required>
+            </label>
+            <label class="sm:w-1/2 w-full">Nachname
+              <input type="text" name="nachname" class="form-input" placeholder="Mustermann" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="sm:w-1/2 w-full">Telefonnummer
+              <input type="tel" name="telefonnummer" class="form-input" placeholder="+43 123 4567890" required>
+            </label>
+            <label class="sm:w-1/2 w-full">Email
+              <input type="text" name="nachname" class="form-input" placeholder="max.mustermann@email.at" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="w-full">Lebenslauf auswählen <span class="text-gray-600">(PDF, DOCX, DOC)</span>
+              <input type="file" accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="datei" class="form-input" required>
+            </label>
+          </div>
+          <label class="inline-flex items-start mt-4">
+            <input type="checkbox" name="rechtliches" class="form-checkbox mt-1 h-5 w-5 text-proprietary-500" required><br>
+            <span class="ml-2">Ich akzeptiere hiermit die <a href="datenschutz.html" class="link">Datenschutz&#173;richtlinie</a> sowie die <a href="agb.html" class="link">Allgemeinen Geschäftsbedingungen</a>.</span>
+          </label>
+          <div class="w-full flex justify-end">
+            <button type="submit" class="btn btn-primary" type="button">
+              Abschicken
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer class="bg-gray-800 text-gray-500">
+    <div class="container mx-auto py-4">
+      <div class="flex md:flex-col flex-row-reverse md:items-center md:justify-start justify-between">
+        <section class="text-gray-400 uppercase">
+          <a href="index.html" class="page-link">Home</a>
+          <a href="account.html" class="page-link">Account</a>
+          <a href="#" class="page-link">GOurmeda Family</a>
+          <a href="#" class="page-link">Partner werden</a>
+          <a href="jobs.html" class="page-link">Jobs</a>
+          <a href="kontakt.html" class="page-link">Kontakt</a>
+        </section>
+        <div class="flex flex-col md:items-center">
+          <a href="index.html" class="md:hidden text-2xl text-proprietary-500 font-semibold">GOurmeda</a>
+          <section class="md:my-4 my-2 md:text-xl text-base">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section>
+            <a href="impressum.html" class="md:inline-block block">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html" class="md:inline-block block">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html" class="md:inline-block block">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr class="border-gray-700 my-4">
+      <section class="uppercase text-center">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

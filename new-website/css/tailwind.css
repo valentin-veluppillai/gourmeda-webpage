@@ -86,7 +86,7 @@
   @apply flex flex-wrap -mx-2;
 }
 .form-row label {
-  @apply text-gray-700 px-2;
+  @apply text-gray-700 px-2 my-1;
 }
 .form-row input,select {
   @apply w-full;
@@ -101,7 +101,7 @@
     @apply -mx-4;
   }
   .form-row label {
-    @apply px-4;
+    @apply px-4 my-0;
   }
 }
 /*----------Breadcrumbs----------*/
@@ -198,6 +198,55 @@
 .tracking.available {
   @apply text-proprietary-500 !important;
 }
+/*----------Accordion----------*/
+.accordion input[type="checkbox"] {
+  @apply hidden;
+}
+.accordion .content {
+  @apply overflow-hidden px-2 text-gray-600 font-medium;
+  max-height: 0;
+  transition: 0.5s;
+}
+.accordion .subtitle {
+  @apply text-gray-700 pt-2 pb-1 text-center;
+}
+@screen sm {
+  .accordion .subtitle {
+    @apply text-left;
+  }
+}
+.accordion .handle {
+  @apply text-gray-800 cursor-pointer font-semibold text-lg py-1;
+}
+.accordion .handle:hover {
+  @apply text-gray-700;
+}
+.accordion .handle:active {
+  @apply text-gray-700;
+}
+
+.accordion .handle:after {
+  @apply float-right font-black;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f053";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1em;
+  line-height: 1.556em;
+  transition: 0.4s;
+}
+
+.accordion > input[type="checkbox"]:checked ~ label .handle:after {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  max-height: 30rem;
+  transition: max-height 0.5s linear;
+}
 /*----------Modal----------*/
 .modal-container {
   @apply fixed left-0 top-0 w-full h-full bg-gray-700 bg-opacity-75 opacity-0 invisible;
@@ -247,8 +296,28 @@ footer a.page-link {
 /*----------Image-Swiper----------*/
 .image-swiper {
   height: 350px;
-  max-height: 40vh;
 }
+.image-swiper {
+  height: 150px;
+  max-height: 30vh;
+}
+@screen sm {
+  .image-swiper {
+    height: 200px;
+    max-height: 40vh;
+  }
+}
+@screen md {
+  .image-swiper {
+    height: 250px;
+  }
+}
+@screen lg {
+  .image-swiper {
+    height: 300px;
+  }
+}
+
 .image-swiper .swiper-slide {
   @apply bg-cover bg-center h-full w-full;
 }
@@ -269,6 +338,27 @@ footer a.page-link {
 }
 .image-swiper .swiper-slide.sixth {
   background-image: url("../img/slider/gourmeda7.jpg");
+}
+
+.recommended-swiper .logo {
+  @apply w-64 mx-auto;
+}
+.recommended-swiper .logo img {
+  @apply object-contain;
+}
+.recommended-swiper h3, .recommended-swiper p {
+  @apply text-center;
+}
+@screen md {
+  .recommended-swiper .logo {
+    @apply w-full m-0;
+  }
+  .recommended-swiper h3, .recommended-swiper p {
+    @apply text-left;
+  }
+}
+.recommended-swiper {
+  @apply mx-auto;
 }
 
 @tailwind utilities;

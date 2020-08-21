@@ -1043,6 +1043,8 @@ video {
   color: rgba(74, 85, 104, var(--text-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .form-row input,select {
@@ -1065,6 +1067,8 @@ video {
   .form-row label {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1286,6 +1290,86 @@ video {
   color: rgba(129, 6, 34, var(--text-opacity)) !important;
 }
 
+/*----------Accordion----------*/
+
+.accordion input[type="checkbox"] {
+  display: none;
+}
+
+.accordion .content {
+  overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  font-weight: 500;
+  max-height: 0;
+  transition: 0.5s;
+}
+
+.accordion .subtitle {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .accordion .subtitle {
+    text-align: left;
+  }
+}
+
+.accordion .handle {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.accordion .handle:hover {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.accordion .handle:active {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.accordion .handle:after {
+  float: right;
+  font-weight: 900;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f053";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1em;
+  line-height: 1.556em;
+  transition: 0.4s;
+}
+
+.accordion > input[type="checkbox"]:checked ~ label .handle:after {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  max-height: 30rem;
+  transition: max-height 0.5s linear;
+}
+
 /*----------Modal----------*/
 
 .modal-container {
@@ -1390,7 +1474,30 @@ footer a.page-link {
 
 .image-swiper {
   height: 350px;
-  max-height: 40vh;
+}
+
+.image-swiper {
+  height: 150px;
+  max-height: 30vh;
+}
+
+@media (min-width: 640px) {
+  .image-swiper {
+    height: 200px;
+    max-height: 40vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-swiper {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-swiper {
+    height: 300px;
+  }
 }
 
 .image-swiper .swiper-slide {
@@ -1422,6 +1529,37 @@ footer a.page-link {
 
 .image-swiper .swiper-slide.sixth {
   background-image: url("../img/slider/gourmeda7.jpg");
+}
+
+.recommended-swiper .logo {
+  width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recommended-swiper .logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.recommended-swiper h3, .recommended-swiper p {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .recommended-swiper .logo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .recommended-swiper h3, .recommended-swiper p {
+    text-align: left;
+  }
+}
+
+.recommended-swiper {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .space-y-0 > :not(template) ~ :not(template) {

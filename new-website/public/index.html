@@ -19,39 +19,35 @@
   
   <div class="swiper-container image-swiper mx-auto text-gray-900">
     <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide first"></div>
-        <div class="swiper-slide second"></div>
-        <div class="swiper-slide third"></div>
-        <div class="swiper-slide fourth"></div>
-        <div class="swiper-slide fifth"></div>
-        <div class="swiper-slide sixth"></div>
+      <div class="swiper-slide first"></div>
+      <div class="swiper-slide second"></div>
+      <div class="swiper-slide third"></div>
+      <div class="swiper-slide fourth"></div>
+      <div class="swiper-slide fifth"></div>
+      <div class="swiper-slide sixth"></div>
     </div>
-    <!-- If we need navigation buttons: -->
-    <!-- <div class="swiper-button-prev"></div> -->
-    <!-- <div class="swiper-button-next"></div> -->
   </div>
 
   <main class="container mx-auto lg:mb-8 mb-4">
-    <section class="relative w-7/12 p-8 mx-auto -mt-16 mb-8 z-10 bg-white rounded shadow-lg">
+    <section class="relative sm:w-7/12 w-full sm:p-8 pt-4 mx-auto sm:-mt-16 sm:mb-8 z-10 bg-white rounded sm:shadow-lg">
       <img src="img/go_top_bike5.png" alt="GOurmeda Logo" class="mx-auto">
-      <h1 class="text-lg text-proprietary-500 text-center mt-8 mb-4 font-semibold">WILLKOMMEN BEI GOurmeda!</h1>
+      <h1 class="text-lg text-proprietary-500 text-center mt-4 mb-2 font-semibold">WILLKOMMEN BEI GOurmeda!</h1>
       <form action="">
-        <div class="w-full flex">
+        <div class="w-full flex sm:max-w-lg max-w-sm mx-auto">
           <input type="text" name="adresse" class="flex-1 form-input rounded-r-none inline-block" placeholder="Wohin soll das Essen geliefert werden?" required><button type="submit" class="flex-none btn btn-primary inline-block rounded-l-none" type="button">
-            Registrieren
+            GO
           </button>
         </div>
       </form>
     </section>
     <section class="my-4">
       <h2 class="my-2 text-center text-xl text-gray-800">Probier doch mal was neues aus...</h2>
-      <div class="swiper-container recommended-swiper p-4">
+      <div class="swiper-container recommended-swiper p-4 mx-8 lg:w-4/6 md:max-w-full max-w-sm">
         <div class="swiper-wrapper pb-4 mb-6">
           <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <div class="relative">
+            <div class="logo relative">
               <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curryinsel" class="w-full h-32 mb-4">
-              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" title="4.95">
+              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" data-tippy-content="4.95 Sterne">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -74,9 +70,9 @@
             </div>
           </div>
           <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <div class="relative">
+            <div class="logo relative">
               <img src="img/GOurmeda_logo_POS.jpg" alt="Logo Restaurant Point of Sale" class="h-32 mb-4">
-              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" title="4.95">
+              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" data-tippy-content="4.95 Sterne">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -99,7 +95,16 @@
             </div>
           </div>
           <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <img src="" alt="Logo Restaurant &lt;Name Restaurant&gt;" class="w-full h-32 mb-4">
+            <div class="logo relative">
+              <img src="" alt="Logo Restaurant &lt;Restaurant&gt;" class="h-32 mb-4">
+              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" data-tippy-content="4.95 Sterne">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
             <h3 class="text-xl uppercase text-gray-800">&lt;Name Restaurant&gt;</h3>
             <p class="text-gray-700 mb-2">&lt;Restaurant description&gt;</p>
             <div class="-mx-1">
@@ -115,7 +120,16 @@
             </div>
           </div>
           <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <img src="" alt="Logo Restaurant &lt;Name Restaurant&gt;" class="w-full h-32 mb-4">
+            <div class="logo relative">
+              <img src="" alt="Logo Restaurant &lt;Restaurant&gt;" class="h-32 mb-4">
+              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" data-tippy-content="4.95 Sterne">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
             <h3 class="text-xl uppercase text-gray-800">&lt;Name Restaurant&gt;</h3>
             <p class="text-gray-700 mb-2">&lt;Restaurant description&gt;</p>
             <div class="-mx-1">
@@ -131,39 +145,16 @@
             </div>
           </div>
           <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <img src="" alt="Logo Restaurant &lt;Name Restaurant&gt;" class="w-full h-32 mb-4">
-            <h3 class="text-xl uppercase text-gray-800">&lt;Name Restaurant&gt;</h3>
-            <p class="text-gray-700 mb-2">&lt;Restaurant description&gt;</p>
-            <div class="-mx-1">
-              <ul>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-              </ul>
-              <hr class="border-gray-200 my-4">
-              <p class="text-gray-700">&lt;Restaurant address&gt;</p>
+            <div class="logo relative">
+              <img src="" alt="Logo Restaurant &lt;Restaurant&gt;" class="h-32 mb-4">
+              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" data-tippy-content="4.95 Sterne">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
             </div>
-          </div>
-          <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <img src="" alt="Logo Restaurant &lt;Name Restaurant&gt;" class="w-full h-32 mb-4">
-            <h3 class="text-xl uppercase text-gray-800">&lt;Name Restaurant&gt;</h3>
-            <p class="text-gray-700 mb-2">&lt;Restaurant description&gt;</p>
-            <div class="-mx-1">
-              <ul>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">&lt;tag&gt;</li>
-              </ul>
-              <hr class="border-gray-200 my-4">
-              <p class="text-gray-700">&lt;Restaurant address&gt;</p>
-            </div>
-          </div>
-          <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <img src="" alt="Logo Restaurant &lt;Name Restaurant&gt;" class="w-full h-32 mb-4">
             <h3 class="text-xl uppercase text-gray-800">&lt;Name Restaurant&gt;</h3>
             <p class="text-gray-700 mb-2">&lt;Restaurant description&gt;</p>
             <div class="-mx-1">
@@ -184,7 +175,7 @@
     </section>
     <section class="my-4">
       <h2 class="my-2 text-center text-xl text-gray-800">Rezensionen</h2>
-      <div class="swiper-container quotation-swiper p-4 w-2/3">
+      <div class="swiper-container quotation-swiper p-4 md:w-4/6 w-full">
         <div class="swiper-wrapper pb-4 mb-6">
           <div class="relative swiper-slide p-4 bg-white rounded border border-gray-300 w-full text-gray-700">
             <p class="italic z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, debitis cumque. Dolorum ullam veniam adipisci corrupti sapiente iste distinctio doloremque quaerat deleniti vel molestiae iure fuga nemo id, nulla possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -193,26 +184,12 @@
             <p class="text-gray-800">Valentin Veluppillai</p>
             <span>19.08.2020</span> &middot; <span class="uppercase">The Point of Sale</span>
           </div>
-          <div class="swiper-slide p-4 bg-white rounded border border-gray-300 w-full">
-            <div class="relative">
-              <img src="img/GOurmeda_logo_POS.jpg" alt="Logo Restaurant Point of Sale" class="w-full h-32 mb-4">
-              <div class="absolute bottom-0 right-0 p-1 bg-gray-100 rounded-tl text-yellow-500 text-xl cursor-default" style="--bg-opacity: 0.95;" title="4.95">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-              </div>
-            </div>
-            <h3 class="text-xl uppercase text-gray-800">Curry Insel</h3>
-            <p class="text-gray-700 mb-2">Srilankisches Essen in gemütlicher Atmosphäre in der Nähe vom Wiener Rathaus.</p>
-            <div class="-mx-1">
-              <ul>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">Frühstück</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">Deli</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">Mittagstisch</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">Wein</li>
-                <li class="inline-block px-2 py-1 m-1 bg-orange-200 rounded-full">Vegetarisch</li>
-              </ul>
-              <hr class="border-gray-200 my-4">
-              <p class="text-gray-700">1040 Wien · Schleifmühlgasse 12-14</p>
-            </div>
+          <div class="relative swiper-slide p-4 bg-white rounded border border-gray-300 w-full text-gray-700">
+            <p class="italic z-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, debitis cumque. Dolorum ullam veniam adipisci corrupti sapiente iste distinctio doloremque quaerat deleniti vel molestiae iure fuga nemo id, nulla possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <i class="absolute fas fa-quote-left bottom-0 right-0 p-4 text-4xl text-gray-200"></i>
+            <i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i><i class="fas fa-star text-yellow-500"></i><i class="fas fa-star-half-alt text-yellow-500"></i><i class="far fa-star text-yellow-500"></i>
+            <p class="text-gray-800">Valentin Veluppillai</p>
+            <span>19.08.2020</span> &middot; <span class="uppercase">The Point of Sale</span>
           </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -226,7 +203,7 @@
           <a href="index.html" class="page-link">Home</a>
           <a href="account.html" class="page-link">Account</a>
           <a href="#" class="page-link">GOurmeda Family</a>
-          <a href="#" class="page-link">Partner werden</a>
+          <a href="partner-werden.html" class="page-link">Partner werden</a>
           <a href="jobs.html" class="page-link">Jobs</a>
           <a href="kontakt.html" class="page-link">Kontakt</a>
         </section>
@@ -253,9 +230,15 @@
     </div>
   </footer>
 
+  <!-- Tippy.js -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <!-- Swiper.js -->
   <script src="vendor/swiper-6.1.2/swiper-bundle.min.js"></script>
   <script>
+    // Tippy.js
+    tippy('[data-tippy-content]');
+    // Swiper.js
     var swiper = new Swiper('.image-swiper', {
       speed: 600,
       centeredSlides: true,
@@ -276,9 +259,9 @@
     });
 
     var swiper = new Swiper('.recommended-swiper', {
-      speed: 1000,
+      speed: 600,
       slidesPerView: 1,
-      spaceBetween: 160,
+      spaceBetween: 16,
       loop: true,
       autoplay: {
         delay: 7500,
@@ -295,20 +278,20 @@
         },
         1024: {
           slidesPerView: 2,
-          spaceBetween: 64,
+          spaceBetween: 32,
         },
         1280: {
           slidesPerView: 3,
-          spaceBetween: 64,
+          spaceBetween: 32,
         },
       }
     });
 
     var swiper = new Swiper('.quotation-swiper', {
-      speed: 1250,
+      speed: 500,
       autoHeight: true,
-      spacebetween: 16,
       slidesPerView: 1,
+      spaceBetween: 16,
       loop: true,
       autoplay: {
         delay: 10000,
