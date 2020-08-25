@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 /*--------------------*/
+html {
+  scroll-behavior: smooth;
+}
 .container {
   @apply px-4;
 }
@@ -116,58 +119,217 @@
 .breadcrumbs a {
   @apply underline;
 }
-/*----------Sidebar----------*/
-.sidebar {
-  @apply mx-4 inline-block fixed;
+/*----------Modal----------*/
+div[id^="modal-container"] {
+  @apply fixed left-0 top-0 w-full h-full bg-gray-700 bg-opacity-75 opacity-0 invisible;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-.sidebar .title {
-  @apply w-full uppercase text-center text-gray-800 font-semibold my-2;
+div[id^="modal-container"] .modal {
+  @apply absolute bg-white rounded p-4 w-10/12 max-w-xs;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.sidebar h3 {
-  @apply text-gray-700 font-semibold mt-1;
+div[id^="modal-container"] .modal .content {
+  @apply float-left mx-2;
 }
-.sidebar label {
+div[id^="modal-container"] .modal .title {
+  @apply font-semibold text-gray-800;
+}
+div[id^="modal-container"] .modal .subtitle {
   @apply text-gray-700;
 }
-.sidebar .form-checkbox {
+div[id^="modal-container"] .modal-icon {
+  @apply float-left;
+}
+div[id^="modal-container"] .modal-close {
+  @apply float-right text-xl text-gray-600;
+  cursor: pointer;
+}
+div[id^="modal-container"] .modal-close:hover {
+  @apply text-gray-700;
+}
+div[id^="modal-container"].show-modal {
+  @apply opacity-100 visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.form-checkbox {
   @apply mr-2 text-proprietary-500;
 }
+div[id^="modal-container"] .content {
+  max-height: 70vh;
+}
+div[id^="modal-container"] .content label:not(.star) {
+  @apply text-gray-700 block;
+}
+div[id^="modal-container"] .content .title {
+  @apply w-full uppercase text-center my-2 m-0;
+}
+div[id^="modal-container"] .content .subtitle {
+  @apply text-gray-700 font-semibold mt-1;
+}
+/*----------Sidebar----------*/
+@screen sm {
+  div[id^="modal-container-sm"] {
+    @apply static inset-auto bg-transparent bg-opacity-100 visible opacity-100;
+    width: auto;
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-sm"] .modal {
+    @apply static bg-transparent rounded-none p-0 inset-auto w-full h-full;
+    transform: none;
+  }
+  div[id^="modal-container-sm"] .modal .content {
+    @apply mx-auto;
+  }
+  div[id^="modal-container-sm"] .modal-icon {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-sm"] .modal-close {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-sm"].show-modal {
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-sm"] .modal-container, div[id^="sidebar"] .modal {
+    @apply h-full;
+  }
+  div[id^="modal-container-sm"] .content {
+    @apply sticky top-0;
+  }
+}
+
+@screen md {
+  div[id^="modal-container-md"] {
+    @apply static inset-auto bg-transparent bg-opacity-100 visible opacity-100;
+    width: auto;
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-md"] .modal {
+    @apply static bg-transparent rounded-none p-0 inset-auto w-full h-full;
+    transform: none;
+  }
+  div[id^="modal-container-md"] .modal .content {
+    @apply mx-auto;
+  }
+  div[id^="modal-container-md"] .modal-icon {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-md"] .modal-close {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-md"].show-modal {
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-md"] .modal-container, div[id^="sidebar"] .modal {
+    @apply h-full;
+  }
+  div[id^="modal-container-md"] .content {
+    @apply sticky top-0;
+  }
+}
+
+@screen lg {
+  div[id^="modal-container-lg"] {
+    @apply static inset-auto bg-transparent bg-opacity-100 visible opacity-100;
+    width: auto;
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-lg"] .modal {
+    @apply static bg-transparent rounded-none p-0 inset-auto w-full h-full;
+    transform: none;
+  }
+  div[id^="modal-container-lg"] .modal .content {
+    @apply mx-auto;
+  }
+  div[id^="modal-container-lg"] .modal-icon {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-lg"] .modal-close {
+    @apply float-none hidden !important;
+  }
+  div[id^="modal-container-lg"].show-modal {
+    transform: none;
+    transition: all 0s ease 0s;
+  }
+  div[id^="modal-container-lg"] .modal-container, div[id^="sidebar"] .modal {
+    @apply h-full;
+  }
+  div[id^="modal-container-lg"] .content {
+    @apply sticky top-0;
+  }
+}
 /*----------Sidebar Stars-rating----------*/
-.stars .star {
+#stars .star {
   @apply text-gray-300 px-1 text-lg float-left;
 }
-.stars input:nth-child(1):hover ~ label:nth-of-type(-n + 1),
-.stars input:nth-child(2):hover ~ label:nth-of-type(-n + 2),
-.stars input:nth-child(3):hover ~ label:nth-of-type(-n + 3),
-.stars input:nth-child(4):hover ~ label:nth-of-type(-n + 4),
-.stars input:nth-child(5):hover ~ label:nth-of-type(-n + 5) {
+#stars input:nth-child(1):hover ~ label:nth-of-type(-n + 1),
+#stars input:nth-child(2):hover ~ label:nth-of-type(-n + 2),
+#stars input:nth-child(3):hover ~ label:nth-of-type(-n + 3),
+#stars input:nth-child(4):hover ~ label:nth-of-type(-n + 4),
+#stars input:nth-child(5):hover ~ label:nth-of-type(-n + 5) {
   @apply text-yellow-600 !important;
 }
-.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
-.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
-.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
-.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
-.stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+#stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+#stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+#stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+#stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+#stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
   @apply text-yellow-500;
 }
 /*----------Restaurantlist----------*/
 .restaurant-item {
-  @apply flex h-40 p-4 py-8;
+  @apply flex py-2;
+}
+@screen sm {
+  .restaurant-item {
+    @apply h-32 p-2 py-4;
+  }
+}
+@screen md {
+  .restaurant-item {
+    @apply h-40 p-4 py-8;
+  }
 }
 .restaurant-item:hover {
   @apply bg-gray-100;
 }
+.restaurant-item .rating {
+  @apply inline-block bg-yellow-200 text-yellow-800 rounded-full px-2 py-1;
+}
+@screen md {
+  .restaurant-image {
+    @apply relative;
+  }
+}
 .restaurant-image {
-  @apply relative mr-2;
+  @apply mr-2;
 }
 .restaurant-image img {
-  @apply object-contain h-full w-32;
+  @apply hidden;
 }
-.restaurant-image div {
-  @apply absolute bg-yellow-200 text-yellow-800 block right-0 bottom-0 rounded-full px-2 py-1;
+@screen sm {
+  .restaurant-image img {
+    @apply block object-contain h-full w-32;
+  }
+}
+.restaurant-image .rating {
+  @apply absolute block right-0 bottom-0;
 }
 .restaurant-item .title {
-  @apply uppercase font-semibold text-gray-800 inline-block mb-2;
+  @apply uppercase font-semibold text-gray-800 inline-block;
+}
+@screen sm {
+  .restaurant-item .title {
+    @apply mb-2;
+  }
 }
 .restaurant-item .tags {
   @apply leading-tight;
@@ -192,6 +354,14 @@
   content: 'Schließt bald';
 }
 
+.tracking {
+  @apply hidden !important;
+}
+@screen sm {
+  .tracking {
+    @apply inline-block !important;
+  }
+}
 .tracking {
   @apply text-gray-400 ml-2 !important;
 }
@@ -246,39 +416,6 @@
 .accordion > input[type="checkbox"]:checked ~ .content {
   max-height: 30rem;
   transition: max-height 0.5s linear;
-}
-/*----------Modal----------*/
-.modal-container {
-  @apply fixed left-0 top-0 w-full h-full bg-gray-700 bg-opacity-75 opacity-0 invisible;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-.modal {
-  @apply absolute bg-white rounded p-4;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.modal .content {
-  @apply float-left mx-2;
-}
-.modal .title {
-  @apply font-semibold text-gray-800;
-}
-.modal.subtitle {
-  @apply text-gray-700;
-}
-.modal-close {
-  @apply float-right text-xl text-gray-600;
-  cursor: pointer;
-}
-.modal-close:hover {
-  @apply text-gray-700;
-}
-.show-modal {
-  @apply opacity-100 visible;
-  transform: scale(1.0);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 /*----------Tippy-Box----------*/
 .tippy-box {
@@ -359,6 +496,152 @@ footer a.page-link {
 }
 .recommended-swiper {
   @apply mx-auto;
+}
+/*----------Restaurant-Menü----------*/
+.speisen-title {
+  @apply mt-4 ml-2 text-gray-800 font-semibold uppercase;
+}
+.speisen-item {
+  @apply flex flex-row items-end justify-between py-2;
+}
+@screen sm {
+  .speisen-title {
+    @apply mt-8 ml-4;
+  }
+  .speisen-item {
+    @apply flex flex-row items-end justify-between p-4;
+  }
+}
+.speisen-item:hover {
+  @apply bg-gray-100;
+}
+.speisen-item .title {
+  @apply font-semibold;
+}
+.speisen-item .subtitle {
+  @apply font-semibold;
+}
+.speisen-item .speisen-content {
+  @apply text-gray-700;
+}
+.speisen-item .preis span::after {
+  content: '€';
+}
+.speisen-item .preis, .speisen-item .preis span {
+  @apply text-gray-700 font-semibold text-lg;
+}
+.speisen-item .preis:hover, .speisen-item .preis span:hover {
+  @apply text-gray-800;
+}
+
+#pepper {
+  @apply text-gray-400 px-1 text-lg float-left;
+}
+#pepper input:nth-child(1):hover ~ label:nth-of-type(-n + 1) {
+  @apply text-green-600 !important;
+}
+#pepper input:nth-child(2):hover ~ label:nth-of-type(-n + 2) {
+  @apply text-orange-400 !important;
+}
+#pepper input:nth-child(3):hover ~ label:nth-of-type(-n + 3) {
+  @apply text-orange-500 !important;
+}
+#pepper input:nth-child(4):hover ~ label:nth-of-type(-n + 4) {
+  @apply text-orange-600 !important;
+}
+#pepper input:nth-child(1):checked ~ label:nth-of-type(-n + 1) {
+  @apply text-green-600;
+}
+#pepper input:nth-child(2):checked ~ label:nth-of-type(-n + 2) {
+  @apply text-proprietary-300;
+}
+#pepper input:nth-child(3):checked ~ label:nth-of-type(-n + 3) {
+  @apply text-proprietary-400;
+}
+#pepper input:nth-child(4):checked ~ label:nth-of-type(-n + 4) {
+  @apply text-proprietary-500;
+}
+/*----------Allergenes----------*/
+.allergenes {
+  @apply inline-block rounded-sm bg-proprietary-500 text-red-100 text-sm;
+}
+.allergenes::after {
+  @apply m-1;
+}
+.allergenes.A::after {
+  content: 'A';
+}
+.allergenes.B::after {
+  content: 'B';
+}
+.allergenes.C::after {
+  content: 'C';
+}
+.allergenes.D::after {
+  content: 'D';
+}
+.allergenes.E::after {
+  content: 'E';
+}
+.allergenes.F::after {
+  content: 'F';
+}
+.allergenes.G::after {
+  content: 'G';
+}
+.allergenes.H::after {
+  content: 'H';
+}
+.allergenes.L::after {
+  content: 'L';
+}
+.allergenes.M::after {
+  content: 'M';
+}
+.allergenes.N::after {
+  content: 'N';
+}
+.allergenes.O::after {
+  content: 'O';
+}
+.allergenes.P::after {
+  content: 'P';
+}
+.allergenes.R::after {
+  content: 'R';
+}
+/*----------Scrollspy----------*/
+.cart .cart-title {
+  @apply text-gray-700 font-semibold break-all;
+}
+.cart .cart-item {
+  @apply my-2;
+}
+.cart .cart-item .cart-preis {
+  @apply text-gray-700;
+}
+.cart .cart-item button {
+  @apply text-gray-600;
+}
+.cart .cart-item .cart-item-edit:hover {
+  @apply text-orange-500;
+}
+.cart .cart-item .cart-item-remove:hover {
+  @apply text-red-500;
+}
+
+.cart .cart-item .cart-delivery-title .fa-car {
+  @apply text-gray-600;
+}
+.cart .cart-item .delivery-title span {
+  @apply text-gray-700 font-semibold;
+}
+.cart .cart-item .delivery-preis {
+  @apply text-gray-700;
+}
+/*----------Scrollspy----------*/
+.scrollspy-link {
+  @apply my-2 text-gray-600 font-semibold;
 }
 
 @tailwind utilities;
