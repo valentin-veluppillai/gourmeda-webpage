@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Kontakt</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="min-h-screen">
+    <nav class="bg-proprietary-500 text-red-100">
+      <div class="container mx-auto py-3">
+        <a href="index.html" class="text-2xl">GOurmeda</a>
+      </div>
+    </nav>
+    <main class="container flex flex-col mx-auto lg:my-8 my-4">
+      <header class="flex-none lg:relative lg:my-8 my-4 text-center">
+        <h1 class="page-title">GOurmeda Konto</h1>
+        <div class="breadcrumbs md:block">
+          <a href="index.html">Home</a>
+          <i class="fas fa-angle-right"></i>
+          Konto
+          <i class="fas fa-angle-right"></i>
+          Login
+        </div>
+      </header>
+      <section class="flex-grow mx-auto w-full flex flex-col items-center">
+        <img src="img/go_top_bike5.png" alt="Logo GOurmeda">
+        <h2 class="font-semibold text-proprietary-500 text-center">Einfach einloggen! Und dein Essen kommt.</h2>
+        <div class="card xl:w-5/12 lg:w-1/2 md:w-2/3 sm:w-3/4 w-full sm:p-8 p-4 rounded shadow-lg">
+          <form action="">
+            <div class="form-row mt-0">
+              <label class="w-full">E-Mail
+                <input type="text" name="email" class="form-input" placeholder="max.mustermann@email.at" required>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="w-full">Passwort
+                <input type="text" name="passwort" class="form-input" placeholder="********" required>
+              </label>
+            </div>
+            <div class="flex justify-between sm:text-base text-xs">
+              <label>
+                <input type="checkbox" name="schliesst-bald" class="form-checkbox text-proprietary-500"> Anmeldedaten merken
+              </label>
+              <a href="#" class="link">Passwort vergessen?</a>
+            </div>
+            <button type="submit" class="btn btn-primary w-full my-2">Einloggen</button>
+            <a href="registrieren.html" class="block btn btn-secondary w-full my-2">Registrieren</a>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="bg-gray-800 text-gray-500">
+    <div class="container mx-auto py-4">
+      <div class="flex md:flex-col flex-row-reverse md:items-center md:justify-start justify-between">
+        <section class="text-gray-400 uppercase">
+          <a href="index.html" class="page-link">Home</a>
+          <a href="account.html" class="page-link">Account</a>
+          <a href="#" class="page-link">GOurmeda Family</a>
+          <a href="partner-werden.html" class="page-link">Partner werden</a>
+          <a href="jobs.html" class="page-link">Jobs</a>
+          <a href="kontakt.html" class="page-link">Kontakt</a>
+        </section>
+        <div class="flex flex-col md:items-center">
+          <a href="index.html" class="md:hidden text-2xl text-proprietary-500 font-semibold">GOurmeda</a>
+          <section class="md:my-4 my-2 md:text-xl text-base">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section>
+            <a href="impressum.html" class="md:inline-block block">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html" class="md:inline-block block">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html" class="md:inline-block block">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr class="border-gray-700 my-4">
+      <section class="uppercase text-center">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

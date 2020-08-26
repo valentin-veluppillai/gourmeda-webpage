@@ -906,6 +906,7 @@ html {
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 0.25rem;
+  text-align: center;
 }
 
 .btn-primary {
@@ -921,6 +922,32 @@ html {
   --bg-opacity: 1;
   background-color: #951a36;
   background-color: rgba(149, 26, 54, var(--bg-opacity));
+}
+
+.btn-secondary {
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #810622;
+  border-color: rgba(129, 6, 34, var(--border-opacity));
+  --text-opacity: 1;
+  color: #810622;
+  color: rgba(129, 6, 34, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.btn-secondary:hover {
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #951a36;
+  border-color: rgba(149, 26, 54, var(--border-opacity));
+  --text-opacity: 1;
+  color: #951a36;
+  color: rgba(149, 26, 54, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
 }
 
 /*----------page-title----------*/
@@ -1179,10 +1206,16 @@ div[id^="modal-container"].show-modal {
 }
 
 .form-checkbox {
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
   --text-opacity: 1;
   color: #810622;
   color: rgba(129, 6, 34, var(--text-opacity));
+}
+
+@media (min-width: 640px) {
+  .form-checkbox {
+    margin-right: 0.5rem;
+  }
 }
 
 div[id^="modal-container"] .content {

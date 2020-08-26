@@ -19,13 +19,19 @@ html {
 }
 /*----------button----------*/
 .btn {
-  @apply font-semibold py-2 px-4 rounded;
+  @apply font-semibold py-2 px-4 rounded text-center;
 }
 .btn-primary {
   @apply bg-proprietary-500 text-red-100;
 }
 .btn-primary:hover {
   @apply bg-proprietary-400;
+}
+.btn-secondary {
+  @apply border-2 border-proprietary-500 text-proprietary-500 bg-white;
+}
+.btn-secondary:hover {
+  @apply border-2 border-proprietary-400 text-proprietary-400 bg-white;
 }
 /*----------page-title----------*/
 .page-title {
@@ -156,7 +162,12 @@ div[id^="modal-container"].show-modal {
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 .form-checkbox {
-  @apply mr-2 text-proprietary-500;
+  @apply mr-1 text-proprietary-500;
+}
+@screen sm {
+  .form-checkbox {
+    @apply mr-2;
+  }
 }
 div[id^="modal-container"] .content {
   max-height: 70vh;
