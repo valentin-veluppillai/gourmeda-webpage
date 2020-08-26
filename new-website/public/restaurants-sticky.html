@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Restaurants</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="bg-proprietary-500 text-red-100">
+    <div class="container mx-auto py-3">
+      <a href="index.html" class="text-2xl">GOurmeda</a>
+    </div>
+  </nav>
+  <main class="container mx-auto lg:my-8 my-4">
+    <header class="lg:relative lg:my-8 my-4 text-center">
+      <h1 class="page-title">Wähle dein Restaurant aus</h1>
+      <div class="breadcrumbs md:block">
+        <a href="index.html">Home</a>
+        <i class="fas fa-angle-right"></i>
+        Restaurants
+      </div>
+    </header>
+    <br class="lg:hidden">
+    <div class="flex flex-row">
+      <section id="sidebar-left" class="lg:w-1/6 md:w-1/5">
+        <div id="modal-container-md-1">
+          <div class="modal">
+            <i class="fas fa-times modal-close"></i>
+            <span class="fa-stack modal-icon">
+              <i class="fas fa-circle fa-stack-2x text-gray-300"></i>
+              <i class="fas fa-filter fa-stack-1x text-gray-600"></i>
+            </span>
+            <div class="content md:left-0 flex flex-col" style="top: 1rem;">
+              <h2 class="title">Auswahl filtern</h2>
+              <h3 class="subtitle">Bewertung:</h3>
+              <div id="stars" class="stars">
+                <input type="radio" id="star1" name="rating" value="1" class="hidden"/>
+                <input type="radio" id="star2" name="rating" value="2" class="hidden"/>
+                <input type="radio" id="star3" name="rating" value="3" class="hidden"/>
+                <input type="radio" id="star4" name="rating" value="4" class="hidden"/>
+                <input type="radio" id="star5" name="rating" value="5" class="hidden"/>
+                <label for="star1" class="star"><i class="fas fa-star"></i></label>
+                <label for="star2" class="star"><i class="fas fa-star"></i></label>
+                <label for="star3" class="star"><i class="fas fa-star"></i></label>
+                <label for="star4" class="star"><i class="fas fa-star"></i></label>
+                <label for="star5" class="star"><i class="fas fa-star"></i></label>
+              </div>
+              <h3 class="subtitle">Öffnungszeiten:</h3>
+              <label>
+                <input type="checkbox" name="geoeffnet" class="form-checkbox" checked>Geöffnet
+              </label>
+              <label>
+                <input type="checkbox" name="schliesst-bald" class="form-checkbox" checked>Schließt bald
+              </label>
+              <label>
+                <input type="checkbox" name="geschlossen" class="form-checkbox">Geschlossen
+              </label>
+              <h3 class="subtitle">Kategorie:</h3>
+              <div class="categories-overflow overflow-y-auto flex-shrink">
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geoeffnet" class="form-checkbox">Italienisch
+                </label>
+                <label>
+                  <input type="checkbox" name="schliesst-bald" class="form-checkbox">Wienerisch
+                </label>
+                <label>
+                  <input type="checkbox" name="geschlossen" class="form-checkbox">Griechisch
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- <div class="inline-block lg:w-1/6 w-1/4 -mx-1"></div> -->
+  
+      <section class="lg:w-4/6 md:w-3/4 w-full inline-block">
+        <a href="menue.html">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours semi md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+        <hr class="border-gray-300 w-full">
+        <a href="">
+        <div class="restaurant-item">
+          <div class="restaurant-image mr-2">
+            <img src="img/GOurmeda_logo_Curry-Insel.jpg" alt="Logo Restaurant Curry Insel">
+            <div class="rating md:visible invisible">4,89 <i class="fas fa-star"></i></div>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between">
+              <h3 class="title">Curry Insel</h3>
+              <div>
+                <div class="rating md:invisible">4,89 <i class="fas fa-star"></i></div>
+                <div data-tippy-content="10:00-14:00 und 16:00-20:30" class="opening-hours open md:inline-block hidden">
+                  <i class="fas fa-clock"></i><span> </span>
+                </div>
+                <i class="fas fa-map-marked-alt tracking available"></i>
+              </div>
+            </div>
+            <div>
+              <p class="tags text-gray-700 font-semibold">Vegetarisch · Sri Lanka · Indisch · bla lorem · Getränke</p>
+              <p class="address text-gray-600 font-semibold">
+                <i class="fas fa-map-marker-alt"></i> Lenaugasse 4, 1080 Wien
+              </p>
+            </div>
+          </div>
+        </div>
+        </a>
+      </section>
+    </div>
+    <button id="modal-trigger-1" class="md:hidden sticky float-right rounded text-2xl text-red-100 bg-proprietary-500 bottom-0" style="bottom: 1rem;"><i class="fas fa-filter fa-fw m-1"></i></button>
+    <div class="h-10 invisible"></div>
+  </main>
+  <footer class="bg-gray-800 text-gray-500">
+    <div class="container mx-auto py-4">
+      <div class="flex md:flex-col flex-row-reverse md:items-center md:justify-start justify-between">
+        <section class="text-gray-400 uppercase">
+          <a href="index.html" class="page-link">Home</a>
+          <a href="account.html" class="page-link">Account</a>
+          <a href="#" class="page-link">GOurmeda Family</a>
+          <a href="partner-werden.html" class="page-link">Partner werden</a>
+          <a href="jobs.html" class="page-link">Jobs</a>
+          <a href="kontakt.html" class="page-link">Kontakt</a>
+        </section>
+        <div class="flex flex-col md:items-center">
+          <a href="index.html" class="md:hidden text-2xl text-proprietary-500 font-semibold">GOurmeda</a>
+          <section class="md:my-4 my-2 md:text-xl text-base">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section>
+            <a href="impressum.html" class="md:inline-block block">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html" class="md:inline-block block">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html" class="md:inline-block block">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr class="border-gray-700 my-4">
+      <section class="uppercase text-center">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    tippy('[data-tippy-content]');
+    tippy('.tracking.available', {
+      content: 'Bestellungsnachverfolgung verfügbar',
+    });
+
+    var modal_1 = document.querySelector("#modal-container-md-1");
+    var trigger_1 = document.querySelector("#modal-trigger-1");
+    var closeButton_1 = modal_1.querySelector(".modal-close");
+
+    function toggleModal_1() {
+        modal_1.classList.toggle("show-modal");
+        trigger_1.classList.toggle("invisible");
+    }
+
+    function windowOnClick_1(event) {
+        if (event.target === modal_1) {
+            toggleModal_1();
+        }
+    }
+
+    trigger_1.addEventListener("click", toggleModal_1);
+    closeButton_1.addEventListener("click", toggleModal_1);
+    window.addEventListener("click", windowOnClick_1);
+    
+    // var modal_2 = document.querySelector("#modal-container-2");
+    // var trigger_2 = document.querySelector("#modal-trigger-2");
+    // var closeButton_2 = modal_2.querySelector(".modal-close");
+
+    // function toggleModal_2() {
+    //     modal_2.classList.toggle("show-modal");
+    //     trigger_2.classList.toggle("invisible");
+    // }
+
+    // function windowOnClick_2(event) {
+    //     if (event.target === modal_2) {
+    //         toggleModal_2();
+    //     }
+    // }
+
+    // trigger_2.addEventListener("click", toggleModal_2);
+    // closeButton_2.addEventListener("click", toggleModal_2);
+    // window.addEventListener("click", windowOnClick_2);
+  </script>
+</body>
+</html>
