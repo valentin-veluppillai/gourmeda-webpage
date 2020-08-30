@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Speisekarte</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="min-h-screen">
+    <nav>
+      <div class="container">
+        <a href="index.html" id="navbar-logo">GOurmeda</a>
+        <div class="navbar-right">
+          <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
+          <a href="partner-werden.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Partner werden'">Partner werden</a>
+          <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
+            <span class="sm:inline-block hidden">GOurmeda Family</span>
+            <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
+          </a>
+          <a href="#" class="inline-block" title="Dein Gourmeda-Konto einsehen"><i class="fas fa-user-circle"></i></a>
+          <a href="#" class="inline-block" title="Change Language to english / Sprache auf Englisch umstellen">EN</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container mx-auto lg:my-8 my-4">
+      <header>
+        <h1 class="page-title">Wähle dein Essen</h1>
+        <div class="breadcrumbs md:block">
+          <a href="index.html">Home</a>
+          <i class="fas fa-angle-right"></i>
+          <!-- put get content after following href attribute!!! -->
+          <a href="restaurants.html">Restaurants</a>
+          <i class="fas fa-angle-right"></i>
+          Speisekarte
+        </div>
+      </header>
+      <br class="lg:hidden">
+      <div class="flex flex-row">
+        <section id="sidebar-left" class="lg:w-1/6 md:w-1/4 sm:w-1/3">
+          <div id="modal-container-sm-1">
+            <div class="modal lg:h-full w-10/12 max-w-lg">
+              <i class="fas fa-times modal-close"></i>
+              <span class="fa-stack modal-icon">
+                <i class="fas fa-circle fa-stack-2x text-gray-300"></i>
+                <i class="fas fa-list fa-stack-1x text-gray-600"></i>
+              </span>
+              <div id="scrollspy-nav" class="content md:sticky md:left-0 flex flex-col" style="top: 1rem;">
+                <h2 class="title">Kategorien</h2>
+                <a href="#suppen" class="scrollspy-link">Suppen</a>
+                <a href="#pos-deli" class="scrollspy-link">POS Deli</a>
+                <a href="#alkoholfreie-getraenke" class="scrollspy-link">Alkoholfreie Getränke</a>
+                <a href="#kaffee" class="scrollspy-link">Kaffee</a>
+                <a href="#bier" class="scrollspy-link">Bier</a>
+                <a href="#wein-und-sekt" class="scrollspy-link">Wein & Sekt</a>
+                <a href="#spirits" class="scrollspy-link">Spirits</a>
+                <button id="modal-trigger-2-1" class="btn btn-primary lg:hidden sm:block hidden">Warenkorb (99)</button>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <section id="scrollspy-section" class="lg:w-1/2 md:w-3/4 w-full inline-block sm:px-4 sm:-mt-8">
+          <section id="suppen" class="scrollspy-section speisen">
+            <h3 class="speisen-title">Suppen</h3>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="speisen-content flex-1">
+                  <h4 class="title">Tomatencremesumme</h4>
+                  <p></p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button onclick="addCartItem('Tomatencremesuppe', '3,90€');"><span>3,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div id="speise-1" class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="speisen-content flex-1">
+                  <h4 class="title">Powersuppe</h4>
+                  <p>mit Vollkornreis, Gemüse und Kokosmilch</p>
+                  <div class="speisen-options ml-2 mt-2 flex sm:flex-row flex-col hidden text-sm">
+                    <div class="inline-block sm:w-1/2 w-full">
+                      <h5 class="subtitle block">Optionen:</h5>
+                      <label class="flex items-center">
+                        <input type="radio" class="form-radio text-proprietary-500" name="radio" value="1">
+                        <span class="ml-2">Brot</span>
+                      </label>
+                      <label class="flex items-center">
+                        <input type="radio" class="form-radio text-proprietary-500" name="radio" value="2">
+                        <span class="ml-2">Reis</span>
+                      </label>
+                      <h5 class="subtitle">Schärfe:</h5>
+                      <div id="pepper">
+                        <input type="radio" id="pepper4" name="spiciness" value="none" class="hidden" checked/>
+                        <input type="radio" id="pepper1" name="spiciness" value="1" class="hidden"/>
+                        <input type="radio" id="pepper2" name="spiciness" value="2" class="hidden"/>
+                        <input type="radio" id="pepper3" name="spiciness" value="3" class="hidden"/>
+                        <label for="pepper4" class="pepper" title="keine Schärfe"><i class="fas fa-times"></i></label>
+                        <label for="pepper1" class="pepper" title="Mild"><i class="fas fa-pepper-hot"></i></label>
+                        <label for="pepper2" class="pepper" title="Mittelscharf"><i class="fas fa-pepper-hot"></i></label>
+                        <label for="pepper3" class="pepper" title="Sehr scharf"><i class="fas fa-pepper-hot"></i></label>
+                      </div>
+                    </div>
+                    <div class="inline-block sm:w-1/2 w-full">
+                      <h5 class="subtitle">Toppings:</h5>
+                      <label class="flex items-center">
+                        <input type="checkbox" name="schliesst-bald" class="form-checkbox text-proprietary-500"> Sahne (+1,00€)
+                      </label>
+                      <label class="flex items-center">
+                        <input type="checkbox" name="schliesst-bald" class="form-checkbox text-proprietary-500"> Sauerrahm (+1,00€)
+                      </label>
+                      <label class="flex items-center">
+                        <input type="checkbox" name="schliesst-bald" class="form-checkbox text-proprietary-500"> Sauerrahm (+1,00€)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button onclick="speisenOptions(1)"><span>5,60</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Thaisuppe</h4>
+                  <p>mit Huhn, Reis und Kokosmilch</p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button onclick="addCartItem('Thaisuppe', '5,60€');"><span>5,60</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="pos-deli" class="scrollspy-section speisen">
+            <h3 class="speisen-title">POS Deli</h3>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">kleiner Linsendhal</h4>
+                  <p>
+                    mit Fladenbrot
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>4,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Hummus mit Oliven</h4>
+                  <p>
+                    mit Fladenbrot
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>4,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="alkoholfreie-getraenke" class="scrollspy-section speisen">
+            <h3 class="speisen-title">Alkoholfreie Getränke</h3>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Römerquelle klein</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>2,80</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Römerquelle klein</h4>
+                  <p>
+                    0,75l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>5,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Coca Cola</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Coca Cola light</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Coca Cola zero</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Almdudler</h4>
+                  <p>
+                    0,35l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Kräuter Kracherl</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Libella Orange</h4>
+                  <p>
+                    0,33l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Eistee Pfirsich</h4>
+                  <p>
+                    0,25l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Eistee Zitrone</h4>
+                  <p>
+                    0,25l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Schweppes Tonic</h4>
+                  <p>
+                    0,2l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>2,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Schweppes Bitter Lemon</h4>
+                  <p>
+                    0,2l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>2,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Schweppes Ginger Ale</h4>
+                  <p>
+                    0,2l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>2,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Red Bull</h4>
+                  <p>
+                    0,25l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,90</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Mangosaft</h4>
+                  <p>
+                    0,25l
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Lassi</h4>
+                  <p>
+                    0,25l süßes Joghurtgetränk mit Rosenwasser
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Mango-Lassi</h4>
+                  <p>
+                    0,25l süßes Joghurtgetränk mit Rosenwasser und Zucker, gemischt mit Mangosaft
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Bio Orange Fairtrade</h4>
+                  <p>
+                    0,2l - Franz Josef Rauch
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Erdbeersaft</h4>
+                  <p>
+                    0,2l - Franz Josef Rauch
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Marille</h4>
+                  <p>
+                    0,2l - Franz Josef Rauch
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Orange-Karotte</h4>
+                  <p>
+                    0,2l - Franz Josef Rauch
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Johannisbeere</h4>
+                  <p>
+                    0,2l - Franz Josef Rauch
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes G"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,10</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="kaffee" class="scrollspy-section speisen">
+            <h3 class="speisen-title">Kaffee</h3>
+          </section>
+          <section id="bier" class="scrollspy-section speisen">
+            <h3 class="speisen-title">Bier</h3>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Paracelsius Bio Zwickl</h4>
+                  <p>
+                    0,5l Flaschenbier
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>4,30</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Columbus Pale Ale</h4>
+                  <p>
+                    0,33l Flaschenbier
+                  </p>
+                </div>
+                <div class="flex-none">
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,50</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">König Ludwig Dunkel</h4>
+                  <p>
+                    0,5l Flaschenbier, dunkel
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>4,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Stiegl Radler Zitrone</h4>
+                  <p>
+                    0,5l Flaschenbier
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,60</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="speisen-item divide-x-8 divide-transparent">
+              <div class="flex flex-row flex-1">
+                <div class="flex-1">
+                  <h4 class="title">Stiegl Freibier Alkoholfrei</h4>
+                  <p>
+                    0,5l Flaschenbier
+                  </p>
+                </div>
+                <div class="flex-none">
+                  <div class="allergenes A"></div>
+                </div>
+              </div>
+              <div class="flex-shrink-0">
+                <div class="preis">
+                  <button><span>3,20</span> <i class="fas fa-cart-plus"></i></button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section id="sidebar-right" class="lg:w-1/3">
+          <div id="modal-container-lg-2">
+            <div class="modal lg:h-full w-10/12 max-w-lg">
+              <i class="fas fa-times modal-close"></i>
+              <span class="fa-stack modal-icon">
+                <i class="fas fa-circle fa-stack-2x text-gray-300"></i>
+                <i class="fas fa-shopping-cart fa-stack-1x text-gray-600"></i>
+              </span>
+              <div class="content cart md:sticky md:left-0 sm:w-full sm:flex sm:flex-col" style="top: 1rem;">
+                <h2 class="title w-auto">Warenkorb</h2>
+                <div class="flex flex-col w-full">
+                  <div id="cart-list" class="flex flex-col overflow-y-auto flex-shrink lg:pr-1" style="max-height: 45vh;">
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="cart-item flex flex-row items-center">
+                      <div class="cart-title flex-1">
+                        Saadam Vegetarisch - Traditionelle Reisspeise
+                      </div>
+                      <div class="cart-preis flex-none mx-2">
+                        22,98€
+                      </div>
+                      <div class="flex-none divide-x-4 divide-transparent">
+                        <button><i class="fas fa-pen cart-item-edit"></i></button>
+                        <button><i class="fas fa-trash cart-item-remove"></i></button>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="cart-item flex-none flex flex-row justify-between">
+                    <div class="delivery-title">
+                      <i class="fas fa-car text-gray-600"></i>
+                      <span>Lieferkosten</span>
+                    </div>
+                    <div class="delivery-preis">
+                      2,30€
+                    </div>
+                  </div>
+                  <hr class="border-2">
+                  <div class="cart-item flex xl:flex-row-reverse flex-col xl:justify-between items-end">
+                    <div class="flex-none xl:self-center xl:pb-0 pb-1">
+                      <span class="font-semibold">Summe: </span>
+                      <span>29,00€</span>
+                    </div>
+                    <div class="flex-none text-gray-600 text-sm">
+                      10% MwSt. von <span>21,20€</span>: <span class="text-red-500">9,12€</span><br>
+                      20% MwSt. von <span>21,20€</span>: <span class="text-red-500">9,12€</span>
+                    </div>
+                  </div>
+                  <div class="w-full flex justify-end mt-2">
+                    <button type="submit" class="btn btn-primary">
+                      Bezahlen
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="flex flex-row fixed bottom-0 left-0 h-10 w-full sm:hidden text-gray-700 divide-x divide-gray-300 border-t border-gray-300 bg-white text-center">
+          <button id="modal-trigger-1" class="h-full w-1/2"><i class="fas fa-list text-gray-600"></i> Kategorien</button>
+          <button id="modal-trigger-2" class="h-full w-1/2"><i class="fas fa-shopping-cart text-gray-600"></i> Warenkorb (2)</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-upper-section">
+        <section class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#">Account</a>
+          <a href="#">GOurmeda Family</a>
+          <a href="partner-werden.html">Partner werden</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="kontakt.html">Kontakt</a>
+        </section>
+        <div class="footer-legal">
+          <a href="index.html" class="footer-logo">GOurmeda</a>
+          <section class="footer-social-links">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section class="footer-legal-links">
+            <a href="impressum.html">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr>
+      <section class="footer-lower-section">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.0.4/dist/scrollspy.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    function addCartItem(title, preis) {
+      var id = 3;
+      var cart = document.querySelector("#cart-list");
+      cart.insertAdjacentHTML("afterbegin", '<div id="cart-item-' + id + '" class="cart-item flex flex-row items-center"><div class="cart-title flex-1">' + title + '</div><div class="cart-preis flex-none mx-2">' + preis + '</div><div class="flex-none divide-x-4 divide-transparent"><button><i class="fas fa-pen cart-item-edit"></i></button><button onclick="removeCartItem(' + id + ');"><i class="fas fa-trash cart-item-remove"></i></button></div></div><hr>');
+      id++;
+    }
+    function removeCartItem(itemID) {
+      var removeCartID = document.querySelector("#cart-item-" + itemId);
+      removeCartID.parentNode.removeChild(removeCartID);
+    }
+
+    // Options Toggle
+    function speisenOptions(id) {
+      var speiseItem = document.querySelector("#speise-"+id);
+      var speise = speiseItem.querySelector(".speisen-options");
+      speise.classList.toggle("hidden");
+    }
+
+    // Scrollspy
+    window.onload = function () {
+      scrollSpy('#scrollspy-nav', {
+        sectionSelector: '.scrollspy-section',
+        targetSelector: '.scrollspy-link',
+        activeClass: 'text-gray-700 underline'
+      });
+    };
+
+    // Tippy.js
+    tippy('.allergenes.A', {
+      content: 'glutenhaltiges Getreide',
+    });
+    tippy('.allergenes.B', {
+      content: 'Krebstiere',
+    });
+    tippy('.allergenes.C', {
+      content: 'Ei',
+    });
+    tippy('.allergenes.D', {
+      content: 'Fisch',
+    });
+    tippy('.allergenes.E', {
+      content: 'Erdnuss',
+    });
+    tippy('.allergenes.F', {
+      content: 'Soja',
+    });
+    tippy('.allergenes.G', {
+      content: 'Milch oder Laktose',
+    });
+    tippy('.allergenes.H', {
+      content: 'Schalenfrüchte',
+    });
+    tippy('.allergenes.L', {
+      content: 'Sellerie',
+    });
+    tippy('.allergenes.M', {
+      content: 'Senf',
+    });
+    tippy('.allergenes.N', {
+      content: 'Sesam',
+    });
+    tippy('.allergenes.O', {
+      content: 'Sulfite',
+    });
+    tippy('.allergenes.P', {
+      content: 'Lupinen',
+    });
+    tippy('.allergenes.R', {
+      content: 'Weichtiere',
+    });
+    
+    // Modals
+    var modal_1 = document.querySelector("#modal-container-sm-1");
+    var trigger_1 = document.querySelector("#modal-trigger-1");
+    var closeButton_1 = modal_1.querySelector(".modal-close");
+    var scrollspy_links = document.getElementsByClassName("scrollspy-link");
+
+    function toggleModal_1() {
+      modal_1.classList.toggle("show-modal");
+      // trigger_1.classList.toggle("invisible");
+      if(modal_1.classList.contains("show-modal") && modal_2.classList.contains("show-modal")) {
+          toggleModal_2();
+      }
+    }
+
+    function windowOnClick_1(event) {
+        if (event.target === modal_1) {
+            toggleModal_1();
+        }
+    }
+
+    function closeModal_1() {
+      modal_1.classList.remove("show-modal");
+    }
+
+    for (var i = 0; i < scrollspy_links.length; i++) {
+      scrollspy_links[i].addEventListener('click', closeModal_1, false);
+    }
+    trigger_1.addEventListener("click", toggleModal_1);
+    closeButton_1.addEventListener("click", toggleModal_1);
+    window.addEventListener("click", windowOnClick_1);
+    
+    var modal_2 = document.querySelector("#modal-container-lg-2");
+    var trigger_2 = document.querySelector("#modal-trigger-2");
+    var trigger_2_1 = document.querySelector("#modal-trigger-2-1");
+    var closeButton_2 = modal_2.querySelector(".modal-close");
+
+    function toggleModal_2() {
+        modal_2.classList.toggle("show-modal");
+        // trigger_2.classList.toggle("invisible");
+        if(modal_1.classList.contains("show-modal") && modal_2.classList.contains("show-modal")) {
+          toggleModal_1();
+      }
+    }
+
+    function windowOnClick_2(event) {
+        if (event.target === modal_2) {
+            toggleModal_2();
+        }
+    }
+
+    trigger_2.addEventListener("click", toggleModal_2);
+    trigger_2_1.addEventListener("click", toggleModal_2);
+    closeButton_2.addEventListener("click", toggleModal_2);
+    window.addEventListener("click", windowOnClick_2);
+  </script>
+</body>
+</html>

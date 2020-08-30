@@ -11,7 +11,7 @@ html {
   @apply overflow-auto bg-white bg-no-repeat;
   background: /* Shadow covers */
   linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
-  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
   background: /* Shadow covers */
   linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
   radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
@@ -41,11 +41,104 @@ html {
 .btn-primary:hover {
   @apply bg-proprietary-400;
 }
+.btn-primary:focus {
+  @apply bg-proprietary-400;
+}
 .btn-secondary {
   @apply border-2 border-proprietary-500 text-proprietary-500 bg-white;
 }
 .btn-secondary:hover {
   @apply border-2 border-proprietary-400 text-proprietary-400 bg-white;
+}
+.btn-secondary:focus {
+  @apply border-2 border-proprietary-400 text-proprietary-400 bg-white;
+}
+/*----------Navbar----------*/
+nav {
+  @apply bg-proprietary-500 text-red-100;
+}
+nav .container {
+  @apply mx-auto py-3 flex items-center justify-between;
+}
+nav #navbar-logo {
+  @apply text-xl font-bold select-none;
+}
+nav .navbar-right {
+  @apply float-right;
+}
+nav .navbar-right a {
+  @apply font-semibold px-2 text-xl;
+}
+@screen sm {
+  nav #navbar-logo {
+    @apply text-2xl;
+  }
+  nav .navbar-right a {
+    @apply text-lg;
+  }
+}
+/*----------Header----------*/
+header {
+  @apply my-4 text-center;
+}
+@screen lg {
+  header {
+    @apply relative my-8;
+  }
+}
+/*----------Footer----------*/
+footer {
+  @apply bg-gray-800 text-gray-500;
+}
+footer hr {
+  @apply border-gray-700 my-4;
+}
+footer .container {
+  @apply mx-auto py-4;
+}
+.footer-upper-section {
+  @apply flex flex-row-reverse justify-between;
+}
+.footer-links {
+  @apply text-gray-400 uppercase;
+}
+.footer-links a {
+  @apply mx-4 my-2 block;
+}
+.footer-lower-section {
+  @apply uppercase text-center;
+}
+.footer-legal {
+  @apply flex flex-col;
+}
+.footer-legal .footer-logo {
+  @apply text-2xl text-proprietary-500 font-semibold select-none;
+}
+.footer-legal .footer-social-links {
+  @apply my-2 text-base;
+}
+.footer-legal .footer-legal-links a {
+  @apply block;
+}
+@screen md {
+  .footer-upper-section {
+    @apply flex-col items-center justify-start;
+  }
+  .footer-links a {
+    @apply my-0 inline-block;
+  }
+  .footer-legal {
+    @apply items-center;
+  }
+  .footer-legal .footer-logo {
+    @apply hidden;
+  }
+  .footer-legal .footer-social-links {
+    @apply inline-block;
+  }
+  .footer-legal .footer-legal-links a {
+    @apply inline-block;
+  }
 }
 /*----------page-title----------*/
 .page-title {
@@ -357,11 +450,14 @@ div[id^="modal-container"] .content .subtitle {
   }
 }
 .restaurant-item .tags {
-  @apply leading-tight;
+  @apply leading-tight text-gray-700 font-semibold;
+}
+.restaurant-item .address {
+  @apply text-gray-600 font-semibold;
 }
 
 .opening-hours {
-  @apply inline-block bg-red-200 rounded-full px-2 py-1 text-red-800 font-semibold;
+  @apply bg-red-200 rounded-full px-2 py-1 text-red-800 font-semibold hidden;
 }
 .opening-hours.open {
   @apply text-green-800 bg-green-200;
@@ -377,6 +473,11 @@ div[id^="modal-container"] .content .subtitle {
 }
 .opening-hours.semi span::after {
   content: 'Schließt bald';
+}
+@screen md {
+  .opening-hours {
+    @apply inline-block;
+  }
 }
 
 .tracking {
@@ -445,15 +546,6 @@ div[id^="modal-container"] .content .subtitle {
 /*----------Tippy-Box----------*/
 .tippy-box {
   @apply bg-gray-800 text-gray-300;
-}
-/*----------Footer----------*/
-footer a.page-link {
-  @apply mx-4 my-2 block;
-}
-@screen md {
-  footer a.page-link {
-    @apply my-0 inline-block;
-  }
 }
 /*----------Image-Swiper----------*/
 .image-swiper {

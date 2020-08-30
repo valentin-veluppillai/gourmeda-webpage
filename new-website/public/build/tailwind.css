@@ -884,7 +884,7 @@ html {
   background-repeat: no-repeat;
   background: /* Shadow covers */
   linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
-  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
   background: /* Shadow covers */
   linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
   radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
@@ -943,6 +943,12 @@ html {
   background-color: rgba(149, 26, 54, var(--bg-opacity));
 }
 
+.btn-primary:focus {
+  --bg-opacity: 1;
+  background-color: #951a36;
+  background-color: rgba(149, 26, 54, var(--bg-opacity));
+}
+
 .btn-secondary {
   border-width: 2px;
   --border-opacity: 1;
@@ -967,6 +973,195 @@ html {
   --bg-opacity: 1;
   background-color: #fff;
   background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.btn-secondary:focus {
+  border-width: 2px;
+  --border-opacity: 1;
+  border-color: #951a36;
+  border-color: rgba(149, 26, 54, var(--border-opacity));
+  --text-opacity: 1;
+  color: #951a36;
+  color: rgba(149, 26, 54, var(--text-opacity));
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+/*----------Navbar----------*/
+
+nav {
+  --bg-opacity: 1;
+  background-color: #810622;
+  background-color: rgba(129, 6, 34, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff5f5;
+  color: rgba(255, 245, 245, var(--text-opacity));
+}
+
+nav .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav #navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav .navbar-right {
+  float: right;
+}
+
+nav .navbar-right a {
+  font-weight: 600;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  nav #navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  nav .navbar-right a {
+    font-size: 1.125rem;
+  }
+}
+
+/*----------Header----------*/
+
+header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  header {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/*----------Footer----------*/
+
+footer {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #a0aec0;
+  color: rgba(160, 174, 192, var(--text-opacity));
+}
+
+footer hr {
+  --border-opacity: 1;
+  border-color: #4a5568;
+  border-color: rgba(74, 85, 104, var(--border-opacity));
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer-upper-section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.footer-links {
+  --text-opacity: 1;
+  color: #cbd5e0;
+  color: rgba(203, 213, 224, var(--text-opacity));
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.footer-lower-section {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-legal .footer-logo {
+  font-size: 1.5rem;
+  --text-opacity: 1;
+  color: #810622;
+  color: rgba(129, 6, 34, var(--text-opacity));
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.footer-legal .footer-social-links {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.footer-legal .footer-legal-links a {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer-upper-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .footer-links a {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  .footer-legal {
+    align-items: center;
+  }
+
+  .footer-legal .footer-logo {
+    display: none;
+  }
+
+  .footer-legal .footer-social-links {
+    display: inline-block;
+  }
+
+  .footer-legal .footer-legal-links a {
+    display: inline-block;
+  }
 }
 
 /*----------page-title----------*/
@@ -1574,10 +1769,20 @@ div[id^="modal-container"] .content .subtitle {
 
 .restaurant-item .tags {
   line-height: 1.25;
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  font-weight: 600;
+}
+
+.restaurant-item .address {
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  font-weight: 600;
 }
 
 .opening-hours {
-  display: inline-block;
   --bg-opacity: 1;
   background-color: #fed7d7;
   background-color: rgba(254, 215, 215, var(--bg-opacity));
@@ -1590,6 +1795,7 @@ div[id^="modal-container"] .content .subtitle {
   color: #9b2c2c;
   color: rgba(155, 44, 44, var(--text-opacity));
   font-weight: 600;
+  display: none;
 }
 
 .opening-hours.open {
@@ -1620,6 +1826,12 @@ div[id^="modal-container"] .content .subtitle {
 
 .opening-hours.semi span::after {
   content: 'Schließt bald';
+}
+
+@media (min-width: 768px) {
+  .opening-hours {
+    display: inline-block;
+  }
 }
 
 .tracking {
@@ -1734,24 +1946,6 @@ div[id^="modal-container"] .content .subtitle {
   --text-opacity: 1;
   color: #e2e8f0;
   color: rgba(226, 232, 240, var(--text-opacity));
-}
-
-/*----------Footer----------*/
-
-footer a.page-link {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  footer a.page-link {
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
-  }
 }
 
 /*----------Image-Swiper----------*/
