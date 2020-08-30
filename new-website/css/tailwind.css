@@ -7,6 +7,20 @@ html {
 .container {
   @apply px-4;
 }
+.overflow-y-auto {
+  @apply overflow-auto bg-white bg-no-repeat;
+  background: /* Shadow covers */
+  linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
+  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  background: /* Shadow covers */
+  linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+}
 /*----------link----------*/
 .link {
   @apply underline text-proprietary-500;
@@ -132,13 +146,13 @@ div[id^="modal-container"] {
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 div[id^="modal-container"] .modal {
-  @apply absolute bg-white rounded p-4 w-10/12 max-w-xs;
+  @apply absolute bg-white rounded p-4;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 div[id^="modal-container"] .modal .content {
-  @apply float-left mx-2;
+  @apply mx-2;
 }
 div[id^="modal-container"] .modal .title {
   @apply font-semibold text-gray-800;
@@ -170,7 +184,7 @@ div[id^="modal-container"].show-modal {
   }
 }
 div[id^="modal-container"] .content {
-  max-height: 70vh;
+  max-height: 80vh;
 }
 div[id^="modal-container"] .content label:not(.star) {
   @apply text-gray-700 block;

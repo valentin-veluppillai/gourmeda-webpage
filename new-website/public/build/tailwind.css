@@ -876,6 +876,25 @@ html {
   padding-right: 1rem;
 }
 
+.overflow-y-auto {
+  overflow: auto;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  background-repeat: no-repeat;
+  background: /* Shadow covers */
+  linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
+  radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  background: /* Shadow covers */
+  linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, /* Shadows */
+  radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+}
+
 /*----------link----------*/
 
 .link {
@@ -1153,15 +1172,12 @@ div[id^="modal-container"] .modal {
   background-color: rgba(255, 255, 255, var(--bg-opacity));
   border-radius: 0.25rem;
   padding: 1rem;
-  width: 83.333333%;
-  max-width: 20rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 div[id^="modal-container"] .modal .content {
-  float: left;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -1219,7 +1235,7 @@ div[id^="modal-container"].show-modal {
 }
 
 div[id^="modal-container"] .content {
-  max-height: 70vh;
+  max-height: 80vh;
 }
 
 div[id^="modal-container"] .content label:not(.star) {
