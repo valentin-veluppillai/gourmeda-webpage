@@ -16,7 +16,7 @@
         <a href="index.html" id="navbar-logo">GOurmeda</a>
         <div class="navbar-right">
           <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
-          <a href="#" class="sm:inline-block hidden" title="Aktuelle Seite: 'Partner werden'">Partner werden</a>
+          <a href="partner-werden.html" class="sm:inline-block hidden" title="Als Partner registrieren">Partner werden</a>
           <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
           <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
           <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
@@ -30,25 +30,52 @@
     </nav>
     <main class="container mx-auto lg:my-8 my-4">
       <header>
-        <h1 class="page-title">Als GOurmeda Partner registrieren</h1>
+        <h1 class="page-title">Bestellung aufgeben</h1>
         <div class="breadcrumbs md:block">
           <a href="index.html">Home</a>
           <i class="fas fa-angle-right"></i>
-          Partner werden
+          <!-- put get content after following href attribute!!! -->
+          <a href="restaurants.html">Restaurants</a>
+          <i class="fas fa-angle-right"></i>
+          <!-- put get content after following href attribute!!! -->
+          <a href="speisen.html">Speisekarte</a>
+          <i class="fas fa-angle-right"></i>
+          Bestellen
         </div>
       </header>
+      <br class="lg:hidden mb-2">
       <section class="mx-auto xl:w-2/3 lg:w-4/5 w-full">
-        <form action="">
-          <div class="alert info">
-            <div class="icon"><i class="fas fa-info-circle "></i></div>
+        <div class="flex -mx-2">
+          <div id="step-1" class="mx-2 border-t-4 w-1/4 border-proprietary-500 hidden sm:block">
+            <div class="text-proprietary-500 uppercase mt-1">Schritt 1</div>
+            <div class="text-gray-800 font-semibold">Kontaktinfo</div>
+          </div>
+          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
+            <div class="text-gray-700 uppercase mt-1">Schritt 2</div>
+            <div class="text-gray-800 font-semibold">Bestellübersicht</div>
+          </div>
+          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
+            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
+            <div class="text-gray-800 font-semibold">Zahlungsmethode</div>
+          </div>
+          <div id="step-4" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
+            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
+            <div class="text-gray-800 font-semibold">Kassa</div>
+          </div>
+        </div>
+
+        <form action="bestellen-2.html" target="_self" method="GET">
+          <div class="alert error">
+            <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
             <div>
-              <h6>Tragen Sie Ihre Unternehmensdaten ein und profitieren Sie von unserem Liefernetzwerk!</h6>
+              <h6>Das Restaurant liefert nicht zu der angegebenen Adresse!</h6>
+              <p class="alert-content">Bitte überprüfen Sie die angegebene Anschrift auf etwaige Fehler.</p>
             </div>
           </div>
     
           <h2 class="form-section title">Persönliche Daten</h2>
           <div class="form-section subtitle">
-            <h3>Tragen Sie hier die Kontaktperson ein.</h3>
+            <h3>Tragen Sie hier Ihre Anschrift ein.</h3>
             <p>* Pflichtfeld</p>
           </div>
           
@@ -72,35 +99,14 @@
               <input type="text" name="nachname" class="form-input" placeholder="Mustermann" required>
             </label>
           </div>
-    
-          <hr class="border-gray-300 lg:my-8 my-4">
-
-          <h2 class="form-section title">Unternehmen</h2>
-          <div class="form-section subtitle">
-            <h3>Tragen Sie hier die Firmendaten ein.</h3>
-            <p>* Pflichtfeld</p>
-          </div>
-    
-          <div class="form-row">
-            <label class="sm:w-1/2 w-full">
-              Firmenname<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-              <input type="text" name="firmenname" class="form-input" placeholder="Musterfirma" required>
-            </label>
-          </div>
           <div class="form-row">
             <label class="sm:w-1/2 w-full">
               Telefonnummer<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="tel" name="telefonnummer" class="form-input" placeholder="+43 1 2345678" required>
             </label>
-          </div>
-          <div class="form-row">
             <label class="sm:w-1/2 w-full">
               Email<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="email" name="email" class="form-input" placeholder="max.mustermann@email.at" required>
-            </label>
-            <label class="sm:w-1/2 w-full">
-              Email wiederholen<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
-              <input type="email" name="repeatEmail" class="form-input" placeholder="max.mustermann@email.at" required>
             </label>
           </div>
           <div class="form-row">
@@ -109,6 +115,16 @@
               <input type="text" name="strasse" class="form-input" placeholder="Musterstraße" required>
             </label>
             <label class="sm:w-1/4 w-full">
+              Stiege
+              <input type="text" name="stiege" class="form-input" placeholder="B">
+            </label>
+            <label class="sm:w-1/4 w-full">
+              Stockwerk
+              <input type="text" name="stockwerk" class="form-input" placeholder="2">
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="sm:w-1/4 w-full">
               Hausnummer<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="text" name="hausnummer" class="form-input" placeholder="14" required>
             </label>
@@ -116,31 +132,18 @@
               Türnummer<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="text" name="tuernummer" class="form-input" placeholder="9" required>
             </label>
-          </div>
-          <div class="form-row">
-            <label class="sm:w-1/2 w-full">
+            <label class="sm:w-1/4 w-full">
               Postleitzahl<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="text" name="PLZ" class="form-input" placeholder="1040" required>
             </label>
-            <label class="sm:w-1/2 w-full">
+            <label class="sm:w-1/4 w-full">
               Stadt<span title="Pflichtfeld" class="text-proprietary-500"> *</span>
               <input type="text" name="stadt" class="form-input" placeholder="Wien" required>
             </label>
           </div>
-    
-          <hr class="border-gray-300 lg:my-8 my-4">
-    
-          <label class="w-full text-gray-700">
-            Nachricht
-            <textarea type="text" name="nachricht" class="form-textarea w-full" placeholder="Hinterlassen Sie uns eine Nachricht..." required></textarea>
-          </label>
-          <label class="inline-flex items-start my-4 lg:mb-8 mb-4">
-            <input type="checkbox" name="rechtliches" class="form-checkbox mt-1 h-5 w-5 text-proprietary-500" required><br>
-            <span class="ml-2">Ich akzeptiere hiermit die <a href="datenschutz.html" class="link">Datenschutz&#173;richtlinie</a> sowie die <a href="agb.html" class="link">Allgemeinen Geschäftsbedingungen</a>.</span>
-          </label>
-          <div class="w-full flex justify-end">
+          <div class="w-full flex justify-end space-x-4">
             <button type="submit" class="btn btn-primary" type="button">
-              Abschicken
+              Weiter
             </button>
           </div>
         </form>
@@ -154,7 +157,7 @@
           <a href="index.html">Home</a>
           <a href="#">Account</a>
           <a href="#">GOurmeda Family</a>
-          <a href="#">Partner werden</a>
+          <a href="partner-werden-html">Partner werden</a>
           <a href="jobs.html">Jobs</a>
           <a href="kontakt.html">Kontakt</a>
         </section>

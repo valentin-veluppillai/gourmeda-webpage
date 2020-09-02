@@ -11,13 +11,25 @@
 </head>
 <body>
   <div class="min-h-screen">
-    <nav class="bg-proprietary-500 text-red-100">
-      <div class="container mx-auto py-3">
-        <a href="index.html" class="text-2xl">GOurmeda</a>
+    <nav>
+      <div class="container">
+        <a href="index.html" id="navbar-logo">GOurmeda</a>
+        <div class="navbar-right">
+          <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
+          <a href="partner-werden.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Partner werden'">Partner werden</a>
+          <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
+            <span class="sm:inline-block hidden">GOurmeda Family</span>
+            <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
+          </a>
+          <a href="#" class="inline-block" title="Dein Gourmeda-Konto einsehen"><i class="fas fa-user-circle"></i></a>
+          <a href="#" class="inline-block" title="Change Language to english / Sprache auf Englisch umstellen">EN</a>
+        </div>
       </div>
     </nav>
     <main class="container mx-auto lg:my-8 my-4">
-      <header class="lg:relative lg:my-8 my-4 text-center">
+      <header>
         <h1 class="page-title">Kontakt aufnehmen</h1>
         <div class="breadcrumbs md:block">
           <a href="index.html">Home</a>
@@ -26,15 +38,15 @@
         </div>
       </header>
       <section class="mx-auto lg:w-10/12 w-full flex md:flex-row flex-col items-center align-middle">
-        <div class="md:w-1/2 sm:w-10/12 w-full mx-4 text-gray-600 md:block flex flex-col items-center">
-          <h2 class="text-lg font-semibold my-4 text-gray-700 text-center">Wir haben ein offenes Ohr für unsere Kunden</h2>
-          <p class="my-2 block">
+        <div class="md:w-1/2 sm:w-10/12 w-full mx-4 text-gray-600 md:block flex flex-col items-center text-center">
+          <h2 class="text-lg font-semibold sm:my-4 my-2 text-gray-700 text-center">Wir haben ein offenes Ohr für unsere Kunden</h2>
+          <p class="sm:my-2 my-1 block">
             Schleifmühlgasse 12-14,<br>
             1080 Wien
           </p>
-          <a href="tel:+4318904290" class="my-2 block"><i class="fas fa-phone-alt fa-fw"></i> +43 (0)1 8904290</a>
-          <a href="mailto:+4318904290" class="my-2 block"><i class="fas fa-envelope fa-fw"></i> +43 (0)1 8904290</a>
-          <div class="px-2 my-2 w-full text-center">Suchst du nach einer offenen Stellen?<br><a href="jobs.html" class="link">Schau dir doch unsere Jobs an</a>.</div>
+          <a href="tel:+4318904290" class="sm:my-2 my-1 block"><i class="fas fa-phone-alt fa-fw"></i> +43 (0)1 8904290</a>
+          <a href="mailto:info@gourmeda.at" class="sm:my-2 my-1 block"><i class="fas fa-envelope fa-fw"></i> info@gourmeda.at</a>
+          <div class="px-2 sm:my-2 my-1 w-full text-center">Suchst du nach einer offenen Stellen? <br class="lg:hidden"><a href="jobs.html" class="link">Schau dir doch unsere Jobs an</a>.</div>
         </div>
         <div class="md:w-1/2 sm:w-10/12 w-full mx-4">
           <form action="">
@@ -74,35 +86,35 @@
       </section>
     </main>
   </div>
-  <footer class="bg-gray-800 text-gray-500">
-    <div class="container mx-auto py-4">
-      <div class="flex md:flex-col flex-row-reverse md:items-center md:justify-start justify-between">
-        <section class="text-gray-400 uppercase">
-          <a href="index.html" class="page-link">Home</a>
-          <a href="account.html" class="page-link">Account</a>
-          <a href="#" class="page-link">GOurmeda Family</a>
-          <a href="partner-werden.html" class="page-link">Partner werden</a>
-          <a href="jobs.html" class="page-link">Jobs</a>
-          <a href="kontakt.html" class="page-link">Kontakt</a>
+  <footer>
+    <div class="container">
+      <div class="footer-upper-section">
+        <section class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#">Account</a>
+          <a href="#">GOurmeda Family</a>
+          <a href="partner-werden.html">Partner werden</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="#">Kontakt</a>
         </section>
-        <div class="flex flex-col md:items-center">
-          <a href="index.html" class="md:hidden text-2xl text-proprietary-500 font-semibold">GOurmeda</a>
-          <section class="md:my-4 my-2 md:text-xl text-base">
+        <div class="footer-legal">
+          <a href="index.html" class="footer-logo">GOurmeda</a>
+          <section class="footer-social-links">
             <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
             <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
             <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
           </section>
-          <section>
-            <a href="impressum.html" class="md:inline-block block">Impressum</a>
+          <section class="footer-legal-links">
+            <a href="impressum.html">Impressum</a>
             <span class="hidden md:inline">&middot;</span>
-            <a href="agb.html" class="md:inline-block block">AGB</a>
+            <a href="agb.html">AGB</a>
             <span class="hidden md:inline">&middot;</span>
-            <a href="datenschutz.html" class="md:inline-block block">Datenschutzrichtlinie</a>
+            <a href="datenschutz.html">Datenschutzrichtlinie</a>
           </section>
         </div>
       </div>
-      <hr class="border-gray-700 my-4">
-      <section class="uppercase text-center">
+      <hr>
+      <section class="footer-lower-section">
         &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
       </section>
     </div>

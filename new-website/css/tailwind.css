@@ -35,6 +35,12 @@ html {
 .btn {
   @apply font-semibold py-2 px-4 rounded text-center;
 }
+.btn:disabled {
+  @apply cursor-not-allowed;
+}
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
 .btn-primary {
   @apply bg-proprietary-500 text-red-100;
 }
@@ -44,14 +50,20 @@ html {
 .btn-primary:focus {
   @apply bg-proprietary-400;
 }
+.btn-primary:disabled {
+  @apply bg-proprietary-700 opacity-50;
+}
 .btn-secondary {
-  @apply border-2 border-proprietary-500 text-proprietary-500 bg-white;
+  @apply border-2 border-proprietary-500 text-proprietary-500 bg-transparent;
 }
 .btn-secondary:hover {
-  @apply border-2 border-proprietary-400 text-proprietary-400 bg-white;
+  @apply border-proprietary-400 text-proprietary-400;
 }
 .btn-secondary:focus {
-  @apply border-2 border-proprietary-400 text-proprietary-400 bg-white;
+  @apply border-proprietary-400 text-proprietary-400;
+}
+.btn-secondary:disabled {
+  @apply border-proprietary-700 text-proprietary-700 opacity-50;
 }
 /*----------Navbar----------*/
 nav {
@@ -153,25 +165,41 @@ footer .container {
 .alert {
   @apply flex w-full p-2 my-4 rounded;
 }
+.alert .icon {
+  @apply mr-2;
+}
 @screen lg {
   .alert {
     @apply p-4 my-8 rounded;
   }
-  .alert.info .icon {
+  .alert .icon {
     @apply mr-4;
   }
 }
 .alert.info {
   @apply bg-blue-100;
 }
-.alert.info .icon {
-  @apply mr-2;
-}
 .alert.info .icon i {
   @apply text-xl text-blue-700;
 }
 .alert.info h6 {
   @apply font-semibold text-blue-800;
+}
+.alert.info .alert-content {
+  @apply text-blue-700;
+}
+
+.alert.error {
+  @apply bg-red-100;
+}
+.alert.error .icon i {
+  @apply text-xl text-red-700;
+}
+.alert.error h6 {
+  @apply font-semibold text-red-800;
+}
+.alert.error .alert-content {
+  @apply text-red-700;
 }
 /*----------form-sections----------*/
 .form-section.title {
@@ -499,9 +527,10 @@ div[id^="modal-container"] .content .subtitle {
   @apply hidden;
 }
 .accordion .content {
-  @apply overflow-hidden px-2 text-gray-600 font-medium;
+  @apply overflow-hidden px-2 text-gray-600 font-medium mx-auto;
   max-height: 0;
   transition: 0.5s;
+  width: max-content;
 }
 .accordion .subtitle {
   @apply text-gray-700 pt-2 pb-1 text-center;
@@ -509,6 +538,9 @@ div[id^="modal-container"] .content .subtitle {
 @screen sm {
   .accordion .subtitle {
     @apply text-left;
+  }
+  .accordion .content {
+    @apply w-full;
   }
 }
 .accordion .handle {
@@ -519,6 +551,9 @@ div[id^="modal-container"] .content .subtitle {
 }
 .accordion .handle:active {
   @apply text-gray-700;
+}
+.accordion .handle div {
+  @apply inline-block ml-2 text-gray-600 uppercase text-base;
 }
 
 .accordion .handle:after {
@@ -542,6 +577,39 @@ div[id^="modal-container"] .content .subtitle {
 .accordion > input[type="checkbox"]:checked ~ .content {
   max-height: 30rem;
   transition: max-height 0.5s linear;
+}
+/*----------Tippy-Box----------*/
+.job-contacts {
+  @apply flex flex-col w-full;
+}
+.job-contacts .contact {
+  @apply flex w-full;
+}
+.job-contacts .contact:nth-child(1) {
+  @apply mb-4;
+}
+.job-contacts .contact img {
+  @apply flex-none w-12 h-12 rounded-full inline-block;
+}
+.job-contacts .contact .details {
+  @apply flex-1 inline-block ml-2;
+}
+.job-contacts .contact .details span, .job-contacts .contact .details a {
+  width: max-content;
+}
+.job-contacts .contact .details span {
+  @apply block text-gray-700;
+}
+.job-contacts .contact .details a {
+  @apply block;
+}
+@screen sm {
+  .job-contacts {
+    @apply flex-row;
+  }
+  .job-contacts .contact {
+    @apply w-1/2;
+  }
 }
 /*----------Tippy-Box----------*/
 .tippy-box {

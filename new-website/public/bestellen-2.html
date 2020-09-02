@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOurmeda: Partner werden</title>
+
+  <link rel="stylesheet" href="./build/tailwind.css">
+
+  <link href="vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="min-h-screen">
+    <nav>
+      <div class="container">
+        <a href="index.html" id="navbar-logo">GOurmeda</a>
+        <div class="navbar-right">
+          <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
+          <a href="partner-werden.html" class="sm:inline-block hidden" title="Als Partner registrieren">Partner werden</a>
+          <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
+            <span class="sm:inline-block hidden">GOurmeda Family</span>
+            <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
+          </a>
+          <a href="#" class="inline-block" title="Dein Gourmeda-Konto einsehen"><i class="fas fa-user-circle"></i></a>
+          <a href="#" class="inline-block" title="Change Language to english / Sprache auf Englisch umstellen">EN</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container mx-auto lg:my-8 my-4">
+      <header>
+        <h1 class="page-title">Bestellung aufgeben</h1>
+        <div class="breadcrumbs md:block">
+          <a href="index.html">Home</a>
+          <i class="fas fa-angle-right"></i>
+          <!-- put get content after following href attribute!!! -->
+          <a href="restaurants.html">Restaurants</a>
+          <i class="fas fa-angle-right"></i>
+          <!-- put get content after following href attribute!!! -->
+          <a href="speisen.html">Speisekarte</a>
+          <i class="fas fa-angle-right"></i>
+          Bestellen
+        </div>
+      </header>
+      <br class="lg:hidden mb-2">
+      <section class="mx-auto xl:w-2/3 lg:w-4/5 w-full">
+        <div class="flex -mx-2">
+          <div id="step-1" class="mx-2 border-t-4 w-1/4 border-proprietary-500 hidden sm:block">
+            <div class="text-proprietary-500 uppercase mt-1">Schritt 1</div>
+            <div class="text-gray-800 font-semibold">Kontaktinfo</div>
+          </div>
+          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-proprietary-500 hidden sm:block">
+            <div class="text-proprietary-500 uppercase mt-1">Schritt 2</div>
+            <div class="text-gray-800 font-semibold">Bestellübersicht</div>
+          </div>
+          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
+            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
+            <div class="text-gray-800 font-semibold">Zahlungsmethode</div>
+          </div>
+          <div id="step-4" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
+            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
+            <div class="text-gray-800 font-semibold">Kassa</div>
+          </div>
+        </div>
+
+        <form action="bestellen-3.html" target="_self">
+          <div class="alert error">
+            <div class="icon"><i class="fas fa-exclamation-circle"></i></div>
+            <div>
+              <h6>Das Restaurant liefert nicht zu der angegebenen Adresse!</h6>
+              <p class="alert-content">Bitte überprüfen Sie die angegebene Anschrift auf etwaige Fehler.</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="sm:w-1/2 w-full">
+              Vorteilsnummer
+              <div class="flex">
+                <input type="text" name="telefonnummer" class="form-input rounded-r-none inline-block" placeholder="#"><button type="button" class="btn btn-primary inline-block rounded-l-none">
+                  Einlösen
+                </button>
+              </div>
+            </label>
+            <label class="sm:w-1/2 w-full">
+              Trinkgeld <i data-tippy-content="Betrag in €" class="fas fa-info-circle text-gray-500"></i>
+              <div class="flex">
+                <input type="number" name="telefonnummer" class="form-input rounded-r-none inline-block" placeholder="0.00€"><button type="button" class="btn btn-primary inline-block rounded-none">
+                  <i class="fas fa-save"></i>
+                </button><button type="button" class="btn btn-primary inline-block rounded-l-none">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </label>
+          </div>
+
+          <input type="text" name="adresse" autofocus="autofocus" class="flex-1 form-input rounded-r-none inline-block" placeholder="Wohin soll das Essen geliefert werden?" required><button type="submit" class="flex-none btn btn-primary inline-block rounded-l-none" type="button">
+            GO
+          </button>
+          <div class="w-full flex justify-end space-x-4">
+            <button type="button" class="btn btn-secondary" type="button">
+              Zurück
+            </button>
+            <button type="submit" class="btn btn-primary" type="button">
+              Weiter
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-upper-section">
+        <section class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#">Account</a>
+          <a href="#">GOurmeda Family</a>
+          <a href="partner-werden-html">Partner werden</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="kontakt.html">Kontakt</a>
+        </section>
+        <div class="footer-legal">
+          <a href="index.html" class="footer-logo">GOurmeda</a>
+          <section class="footer-social-links">
+            <a href="https://www.facebook.com/GOurmeda/" target="_blank"><i class="fab fa-facebook mx-2"></i></a>
+            <a href="https://twitter.com/GOurmeda_Essen" target="_blank"><i class="fab fa-twitter mx-2"></i></a>
+            <a href="https://www.instagram.com/Gourmeda/" target="_blank"><i class="fab fa-instagram mx-2"></i></a>
+          </section>
+          <section class="footer-legal-links">
+            <a href="impressum.html">Impressum</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="agb.html">AGB</a>
+            <span class="hidden md:inline">&middot;</span>
+            <a href="datenschutz.html">Datenschutzrichtlinie</a>
+          </section>
+        </div>
+      </div>
+      <hr>
+      <section class="footer-lower-section">
+        &copy; 2020 GOurmeda<span class="md:visible invisible"> - </span><br class="md:hidden">Alle Rechte vorbehalten.
+      </section>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    tippy('[data-tippy-content]');
+  </script>
+</body>
+</html>
