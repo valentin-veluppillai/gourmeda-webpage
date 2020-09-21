@@ -18,7 +18,7 @@
           <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
           <a href="partner-werden.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Partner werden'">Partner werden</a>
           <a href="#" class="sm:inline-block hidden" title="Aktuelle Seite: 'Jobs'">Jobs</a>
-          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone-alt"></i></a>
           <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
             <span class="sm:inline-block hidden">GOurmeda Family</span>
             <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
@@ -135,7 +135,15 @@
             </label>
           </div>
           <div class="form-row">
-            <label class="w-full">Lebenslauf auswählen <span class="text-gray-600">(PDF, DOCX, DOC)</span>
+            <label class="sm:w-1/4 w-full">
+              Stelle
+              <select name="anrede" class="form-select" required>
+                <option disabled selected></option>
+                <option>ZustellerIn</option>
+                <option>TelefonistIn</option>
+              </select>
+            </label>
+            <label class="sm:w-3/4 w-full">Lebenslauf auswählen <span class="text-gray-600">(PDF, DOCX, DOC)</span>
               <input type="file" accept=".pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="datei" class="form-input" required>
             </label>
           </div>

@@ -18,7 +18,7 @@
           <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
           <a href="partner-werden.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Partner werden'">Partner werden</a>
           <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
-          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone-alt"></i></a>
           <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
             <span class="sm:inline-block hidden">GOurmeda Family</span>
             <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
@@ -436,6 +436,8 @@
       content: 'Bestellungsnachverfolgung verfügbar',
     });
 
+    var body = document.querySelector("body");
+
     var modal_1 = document.querySelector("#modal-container-md-1");
     var trigger_1 = document.querySelector("#modal-trigger-1");
     var closeButton_1 = modal_1.querySelector(".modal-close");
@@ -443,6 +445,7 @@
     function toggleModal_1() {
         modal_1.classList.toggle("show-modal");
         trigger_1.classList.toggle("invisible");
+        body.classList.toggle("overflow-y-hidden");
     }
 
     function windowOnClick_1(event) {

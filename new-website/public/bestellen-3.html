@@ -50,11 +50,11 @@
             <div class="step-title">Schritt 1</div>
             <div class="step-subtitle">Kontaktinfo</div>
           </div>
-          <div id="step-2" class="active">
+          <div id="step-2">
             <div class="step-title">Schritt 2</div>
             <div class="step-subtitle">Bestellübersicht</div>
           </div>
-          <div id="step-3">
+          <div id="step-3" class="active">
             <div class="step-title">Schritt 3</div>
             <div class="step-subtitle">Zahlungsmethode</div>
           </div>
@@ -64,90 +64,37 @@
           </div>
         </div>
 
+        <div class="alert info">
+          <div class="icon"><i class="fas fa-info-circle "></i></div>
+          <div>
+            <h6>Bestellung abschließen</h6>
+            <p class="alert-content">Wähle deine bevorzugte Bezahlmethode aus und schließe deine Bestellung ab!</p>
+          </div>
+        </div>
+
         <form action="bestellen-3.html" target="_self">
-          <div class="cart flex flex-col">
-            <div id="cart-list" class="flex flex-col">
-              <div class="cart-item flex flex-row items-center">
-                <div class="cart-title flex-1">
-                  Saadam Vegetarisch - Traditionelle Reisspeise
-                  <br><span class="font-medium text-gray-600 sm:text-base text-sm">mit Naan Brot und milder Schärfe</span>
-                </div>
-                <div class="cart-preis flex-none mx-2">
-                  22,98€
-                </div>
-                <div class="flex-none divide-x-4 divide-transparent">
-                  <!-- <button><i class="fas fa-pen cart-item-edit"></i></button> -->
-                  <button><i class="fas fa-trash cart-item-remove"></i></button>
-                </div>
+          <div class="provider-accordion">
+            <input type="radio" name="provider" id="accordion-handle1" checked>
+            <label for="accordion-handle1">
+              <div class="handle">
+                <h3 class="inline-block">TelefonistIn gesucht</h3>
+                <div>Vollzeit</div>
               </div>
-              <hr>
-              <div class="cart-item flex flex-row items-center">
-                <div class="cart-title flex-1">
-                  Saadam Vegetarisch - Traditionelle Reisspeise
-                </div>
-                <div class="cart-preis flex-none mx-2">
-                  22,98€
-                </div>
-                <div class="flex-none divide-x-4 divide-transparent">
-                  <!-- <button><i class="fas fa-pen cart-item-edit"></i></button> -->
-                  <button><i class="fas fa-trash cart-item-remove"></i></button>
-                </div>
+            </label>
+            <div class="content">awdawd</div>
+          </div>
+          <hr class="border-gray-300 my-3">
+          <div class="provider-accordion">
+            <input type="radio" name="provider" id="accordion-handle2">
+            <label for="accordion-handle2">
+              <div class="handle">
+                <h3 class="inline-block">Bargeld</h3>
+                <div>Vollzeit</div>
               </div>
-              <hr>
-              <div class="cart-item flex flex-row items-center">
-                <div class="cart-title flex-1">
-                  Saadam Vegetarisch - Traditionelle Reisspeise
-                </div>
-                <div class="cart-preis flex-none mx-2">
-                  22,98€
-                </div>
-                <div class="flex-none divide-x-4 divide-transparent">
-                  <!-- <button><i class="fas fa-pen cart-item-edit"></i></button> -->
-                  <button><i class="fas fa-trash cart-item-remove"></i></button>
-                </div>
-              </div>
-              <hr>
-            </div>
-            <div class="cart-item flex-none flex flex-row justify-between">
-              <div class="delivery-title">
-                <i class="fas fa-shipping-fast text-gray-600"></i>
-                <span>Lieferkosten <i>(2,51km)</i></span>
-              </div>
-              <div class="delivery-preis">
-                2,30€
-              </div>
-            </div>
-            <hr class="border-2">
-            <div class="cart-item flex sm:flex-row-reverse flex-col sm:justify-between items-end">
-              <div class="flex-none xl:self-center xl:pb-0 pb-1 text-lg">
-                <span class="font-semibold">Summe: </span>
-                <span>29,00€</span>
-              </div>
-              <div class="flex-none text-gray-600 text-sm">
-                10% MwSt. von <span>21,20€</span>: <span class="text-red-500">9,12€</span><br>
-                20% MwSt. von <span>21,20€</span>: <span class="text-red-500">9,12€</span>
-              </div>
-            </div>
+            </label>
+            <div class="content">awdawdawd</div>
           </div>
 
-          <div class="form-row">
-            <label class="sm:w-1/2 w-full">
-              Vorteilsnummer
-              <div class="flex">
-                <input type="text" name="telefonnummer" class="form-input rounded-r-none inline-block" placeholder="#"><button type="button" class="btn btn-primary inline-block rounded-l-none">
-                  <span class="md:inline-block hidden">Einlösen</span><span class="md:hidden"><i class="fas fa-check"></i></span>
-                </button>
-              </div>
-            </label>
-            <label class="sm:w-1/2 w-full">
-              Trinkgeld <i data-tippy-content="Betrag in €" class="fas fa-info-circle text-gray-500"></i>
-              <div class="flex">
-                <input type="number" name="telefonnummer" class="form-input rounded-r-none inline-block" placeholder="0.00€" step="0.01"><button type="button" class="btn btn-primary inline-block rounded-l-none">
-                  <i class="fas fa-trash"></i>
-                </button>
-              </div>
-            </label>
-          </div>
           <div class="w-full mt-8 flex justify-end space-x-4">
             <button type="button" class="btn btn-secondary" type="button">
               Zurück

@@ -895,6 +895,15 @@ html {
   background-attachment: local, local, scroll, scroll;
 }
 
+.modal .content .overflow-y-auto {
+  margin-right: -0.75rem;
+  padding-right: 0.75rem;
+}
+
+.fa-hidden-important::before {
+  display: none !important;
+}
+
 /*----------link----------*/
 
 .link {
@@ -1420,11 +1429,6 @@ div[id^="modal-container"] .modal {
   transform: translate(-50%, -50%);
 }
 
-div[id^="modal-container"] .modal .content {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 div[id^="modal-container"] .modal .title {
   font-weight: 600;
   --text-opacity: 1;
@@ -1907,7 +1911,8 @@ div[id^="modal-container"] .content .subtitle {
 
 /*----------Accordion----------*/
 
-.accordion input[type="checkbox"] {
+.accordion input[type="checkbox"],
+.accordion input[type="radio"] {
   display: none;
 }
 
@@ -1993,13 +1998,98 @@ div[id^="modal-container"] .content .subtitle {
   transition: 0.4s;
 }
 
-.accordion > input[type="checkbox"]:checked ~ label .handle:after {
+.accordion > input[type="checkbox"]:checked ~ label .handle:after,
+.accordion > input[type="radio"]:checked ~ label .handle:after {
   transform: rotate(-90deg);
   transform-origin: center;
   transition: 0.4s;
 }
 
-.accordion > input[type="checkbox"]:checked ~ .content {
+.accordion > input[type="checkbox"]:checked ~ .content,
+.accordion > input[type="radio"]:checked ~ .content {
+  max-height: 30rem;
+  transition: max-height 0.5s linear;
+}
+
+/*----------Provider-Accordion----------*/
+
+/* .provider-accordion input[type="radio"] {
+  @apply hidden;
+} */
+
+.provider-accordion .content {
+  overflow: hidden;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 0;
+  transition: 0.5s;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.provider-accordion .subtitle {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .provider-accordion .subtitle {
+    text-align: left;
+  }
+
+  .provider-accordion .content {
+    width: 100%;
+  }
+}
+
+.provider-accordion .handle {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+  cursor: pointer;
+  font-size: 1.125rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.provider-accordion .handle:hover {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.provider-accordion .handle:active {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.provider-accordion .handle div {
+  display: inline-block;
+  margin-left: 0.5rem;
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.provider-accordion > input[type="radio"]:checked ~ .handle {
+  font-weight: 600;
+}
+
+.provider-accordion > input[type="radio"]:checked ~ .content {
   max-height: 30rem;
   transition: max-height 0.5s linear;
 }
@@ -2378,7 +2468,13 @@ div[id^="modal-container"] .content .subtitle {
   color: #4a5568;
   color: rgba(74, 85, 104, var(--text-opacity));
   font-weight: 600;
-  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 640px) {
+  .cart .cart-title {
+    overflow-wrap: break-word;
+  }
 }
 
 .cart .cart-item {
@@ -2427,6 +2523,81 @@ div[id^="modal-container"] .content .subtitle {
   --text-opacity: 1;
   color: #4a5568;
   color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+/*----------Scrollspy----------*/
+
+.process-steps {
+  width: 100%;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.process-steps > div {
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.process-steps > div.active {
+  display: block;
+}
+
+.process-steps > div:not(.active) {
+  display: none;
+}
+
+.process-steps > div.active ~ div {
+  --border-opacity: 1;
+  border-color: #cbd5e0;
+  border-color: rgba(203, 213, 224, var(--border-opacity));
+}
+
+.process-steps > div.active ~ div .step-title {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.process-steps > div.active .step-subtitle {
+  font-weight: 600;
+}
+
+.process-steps .step-title {
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  --text-opacity: 1;
+  color: #810622;
+  color: rgba(129, 6, 34, var(--text-opacity));
+}
+
+.process-steps .step-subtitle {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
+}
+
+@media (min-width: 640px) {
+  .process-steps {
+    width: auto;
+    display: flex;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .process-steps > div {
+    border-top-width: 4px;
+    width: 25%;
+    --border-opacity: 1;
+    border-color: #810622;
+    border-color: rgba(129, 6, 34, var(--border-opacity));
+  }
+
+  .process-steps > div:not(.active) {
+    display: block;
+  }
 }
 
 /*----------Scrollspy----------*/

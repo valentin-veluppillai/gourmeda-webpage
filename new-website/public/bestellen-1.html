@@ -18,7 +18,7 @@
           <a href="index.html" class="md:inline-block hidden" title="Navigiere zur Startseite">Home</a>
           <a href="partner-werden.html" class="sm:inline-block hidden" title="Als Partner registrieren">Partner werden</a>
           <a href="jobs.html" class="sm:inline-block hidden" title="Navigiere zur Seite 'Jobs'">Jobs</a>
-          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone"></i></a>
+          <a href="tel://+4318904290" class="inline-block sm:hidden" title="Bei Gourmeda anrufen"><i class="fas fa-phone-alt"></i></a>
           <a href="#" title="Navigiere zu unserem Service 'Gourmeda Family'">
             <span class="sm:inline-block hidden">GOurmeda Family</span>
             <span class="inline-block sm:hidden"><i class="fas fa-users"></i></span>
@@ -30,7 +30,7 @@
     </nav>
     <main class="container mx-auto lg:my-8 my-4">
       <header>
-        <h1 class="page-title">Bestellung aufgeben</h1>
+        <h1 class="page-title">Bestellung</h1>
         <div class="breadcrumbs md:block">
           <a href="index.html">Home</a>
           <i class="fas fa-angle-right"></i>
@@ -44,23 +44,23 @@
         </div>
       </header>
       <br class="lg:hidden mb-2">
-      <section class="mx-auto xl:w-2/3 lg:w-4/5 w-full">
-        <div class="flex -mx-2">
-          <div id="step-1" class="mx-2 border-t-4 w-1/4 border-proprietary-500 hidden sm:block">
-            <div class="text-proprietary-500 uppercase mt-1">Schritt 1</div>
-            <div class="text-gray-800 font-semibold">Kontaktinfo</div>
+      <section class="mx-auto xl:w-1/2 lg:w-2/3 w-full">
+        <div class="process-steps">
+          <div id="step-1" class="active">
+            <div class="step-title">Schritt 1</div>
+            <div class="step-subtitle">Kontaktinfo</div>
           </div>
-          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
-            <div class="text-gray-700 uppercase mt-1">Schritt 2</div>
-            <div class="text-gray-800 font-semibold">Bestellübersicht</div>
+          <div id="step-2">
+            <div class="step-title">Schritt 2</div>
+            <div class="step-subtitle">Bestellübersicht</div>
           </div>
-          <div id="step-3" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
-            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
-            <div class="text-gray-800 font-semibold">Zahlungsmethode</div>
+          <div id="step-3">
+            <div class="step-title">Schritt 3</div>
+            <div class="step-subtitle">Zahlungsmethode</div>
           </div>
-          <div id="step-4" class="mx-2 border-t-4 w-1/4 border-gray-400 hidden sm:block">
-            <div class="text-gray-700 uppercase mt-1">Schritt 3</div>
-            <div class="text-gray-800 font-semibold">Kassa</div>
+          <div id="step-4">
+            <div class="step-title">Schritt 4</div>
+            <div class="step-subtitle">Kassa</div>
           </div>
         </div>
 
@@ -78,6 +78,11 @@
             <h3>Tragen Sie hier Ihre Anschrift ein.</h3>
             <p>* Pflichtfeld</p>
           </div>
+
+          <label class="inline-flex items-start mt-4">
+            <input type="checkbox" id="useAddress" name="useAddress" class="form-checkbox mt-1 h-5 w-5 text-proprietary-500"><br>
+            <span class="text-gray-700">Gespeicherte Adresse verwenden</span>
+          </label>
           
           <div class="form-row">
             <label class="sm:w-1/4 w-1/2">
@@ -141,7 +146,7 @@
               <input type="text" name="stadt" class="form-input" placeholder="Wien" required>
             </label>
           </div>
-          <div class="w-full flex justify-end space-x-4">
+          <div class="w-full flex justify-end space-x-4 mt-2">
             <button type="submit" class="btn btn-primary" type="button">
               Weiter
             </button>
@@ -183,5 +188,61 @@
       </section>
     </div>
   </footer>
+
+  <script>
+    var useAddress = document.getElementById("useAddress");
+    // var vorname = document.getElementsByName("vorname");
+    // var nachname = document.getElementsByName("nachname");
+    // var telefonnummer = document.getElementsByName("telefonnummer");
+    // var email = document.getElementsByName("email");
+    // var strasse = document.getElementsByName("strasse");
+    // var stiege = document.getElementsByName("stiege");
+    // var stockwerk = document.getElementsByName("stockwerk");
+    // var hausnummer = document.getElementsByName("hausnummer");
+    // var tuernummer = document.getElementsByName("tuernummer");
+    // var plz = document.getElementsByName("PLZ");
+    // var stadt = document.getElementsByName("stadt");
+
+    // var values = {
+    //   vorname: "Max",
+    //   nachname: "Mustermann",
+    //   telefonnummer: "+43 123 4567890",
+    //   email: "max.mustermann@email.at",
+    //   strasse: "Musterstraße",
+    //   stiege: 2,
+    //   stockwerk: 4,
+    //   hausnummer: 19,
+    //   tuernummer: 4,
+    //   plz: 1050,
+    //   stadt: "Wien"
+    // }
+
+    var inputs = [
+      document.getElementsByName("vorname"),
+      document.getElementsByName("nachname"),
+      document.getElementsByName("telefonnummer"),
+      document.getElementsByName("email"),
+      document.getElementsByName("strasse"),
+      document.getElementsByName("stiege"),
+      document.getElementsByName("stockwerk"),
+      document.getElementsByName("hausnummer"),
+      document.getElementsByName("tuernummer"),
+      document.getElementsByName("PLZ"),
+      document.getElementsByName("stadt")
+    ]
+
+    var values = ["Maxa", "Mustermann", "+43 123 4567890", "max.mustermann@email.at", "Musterstraße", 2, 4, 19, 4, 1050, "Wien"];
+    
+    function enterAddress() {
+      if(useAddress.checked === true) {
+        for (var i = 0; i < inputs.length; i++) {
+          inputs[i].value = values[i];
+        }
+        console.log("Test");
+      }
+    }
+
+    useAddress.addEventListener("click", enterAddress);
+  </script>
 </body>
 </html>
