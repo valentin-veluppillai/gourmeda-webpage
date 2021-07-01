@@ -1,15 +1,15 @@
 # Seiten fürs Redesign
 ## TODO
 ### Notwendig
-[X] Home
-[X] Restaurantübersicht
-[ ] Menü
-[X] Registrieren
-[X] Login
-[X] Partner werden
-[X] Jobs
+- [X] Home
+- [X] Restaurantübersicht
+- [ ] Menü
+- [X] Registrieren
+- [X] Login
+- [X] Partner werden
+- [X] Jobs
 ### Falls erforderlich
-[ ] Bezahlseite
-[ ] Bestellungsverfolgung
+- [ ] Bezahlseite
+- [ ] Bestellungsverfolgung
 ### Freiwillig
-[X] Kontakt
+- [X] Kontakt
